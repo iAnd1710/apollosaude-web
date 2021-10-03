@@ -64,12 +64,15 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: 'http://127.0.0.1:5000',
+    timeout: 1000
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      title: 'Apollo Health: compartilhe a sua história',
+      title: 'Apollo Saúde: compartilhe a sua história',
       description: 'Seus melhores flashes e memórias ainda mais inesquecíveis com a Apollo Health!',
       author: 'Apollo Health Social Network Ltda.',
       ogTitle: 'Apollo Health: compartilhe a sua história',
