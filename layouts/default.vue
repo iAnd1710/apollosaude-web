@@ -17,7 +17,7 @@
 
       <v-btn v-if='!isMobile' rounded color='white' elevation='0' class='mx-3 text-uppercase' href='/account/login'>{{ words.logIn }}</v-btn>
 
-      <v-btn v-if='!isMobile' rounded color='primary' elevation='0' class='mx-3 text-uppercase' href='/account/sign-up'>{{ words.signUp }}</v-btn>
+      <v-btn v-if='!isMobile' rounded color='primary' elevation='0' class='mx-3 text-uppercase' href='/prediction'>{{ words.disease }}</v-btn>
 
       <v-btn v-if='isMobile' color='primary' icon @click.stop="drawer = !drawer">
         <v-icon large>{{ drawer ? 'close' : 'drag_handle' }}</v-icon>
@@ -89,7 +89,7 @@ export default {
       },
       words: {
         projects: 'Projetos',
-        signUp: 'Registrar',
+        disease: 'Fazer Diagnóstico',
         contact: 'Contato',
         logIn: 'Entrar',
         services: 'Serviços',

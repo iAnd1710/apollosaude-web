@@ -21,18 +21,18 @@
               class="form-control"
               id="symptom"
             >
-              <option value="Itching" selected>Coceira</option>
-              <option value="skin_rash" selected>skin_rash</option>
+              <option value="Itching" selected>{{ words.itching }}</option>
+              <option value="skin_rash" selected></option>
               <option value="nodal_skin_eruptions" selected></option>
-              <option value="continuous_sneezing" selected>Espirros contínuos</option>
-              <option value="shivering" selected>Tremedeira</option>
-              <option value="chills" selected>Arrepios</option>
-              <option value="joint_pain" selected>Dores nas articulações</option>
-              <option value="stomach_pain" selected>Dor de estômago</option>
-              <option value="acidity" selected>Acidez</option>
-              <option value="ulcers_on_tongue" selected>Rainy</option>
-              <option value="muscle_wasting" selected>Perda de massa muscular</option>
-              <option value="Vomiting" selected>Vômito</option>
+              <option value="continuous_sneezing" selected></option>
+              <option value="shivering" selected></option>
+              <option value="chills" selected></option>
+              <option value="joint_pain" selected></option>
+              <option value="stomach_pain" selected></option>
+              <option value="acidity" selected></option>
+              <option value="ulcers_on_tongue" selected></option>
+              <option value="muscle_wasting" selected></option>
+              <option value="Vomiting" selected></option>
             </select>
           </div>
 
@@ -59,7 +59,140 @@ export default {
       diseasedata: {
         symptoms: []
       },
-      APIResult: []
+      APIResult: [],
+      words: {
+        itching: 'Coceira',
+        skinRash: 'Erupção cutânea',
+        nodalSkinEruptions: '',
+        continuousSneezing: '',
+        shivering: '',
+        chills: '',
+        jointPain: '',
+        stomachPain: '',
+        acidity: '',
+        ulcersOnTongue: '',
+        muscleWasting: '',
+        vomiting: '',
+        burningMicturition: '',
+        spottingUrination: '',
+        fatique: '',
+        weightGain: '',
+        anxiety: '',
+        coldHandsAndFeets: '',
+        moodSwings: '',
+        weightLoss: '',
+        restlessness: '',
+        lethargy: '',
+        patchesInThroat: '',
+        irregularSugarLevel: '',
+        cough: '',
+        highFever: '',
+        sunkenEyes: '',
+        breathlessness: '',
+        sweating: '',
+        dehydration: '',
+        indigestion: '',
+        headache: '',
+        yellowishSkin: '',
+        darkUrine: '',
+        nausea: '',
+        lossOfAppetite: '',
+        painBehindTheEyes: '',
+        constipation: '',
+        abdominalPain: '',
+        diarrhoea: '',
+        mildFever: '',
+        yellowUrine: '',
+        yellowingOfEyes: '',
+        acuteLiverFailure: '',
+        fluidOverLoad: '',
+        swellingOfStomach: '',
+        swelledLymphNodes: '',
+        malaise: '',
+        blurredAndDistortedVision: '',
+        phlegm: '',
+        throatIrritation: '',
+        rednessOfEyes: '',
+        sinusPressure: '',
+        runnyNose: '',
+        congestion: '',
+        chestPain: '',
+        weaknessInLimbs: '',
+        fastHeartRate: '',
+        painDuringBowelMovements: '',
+        painInAnalRegion: '',
+        bloodyStool: '',
+        irritationInAnus: '',
+        neckPain: '',
+        dizziness: '',
+        cramps: '',
+        bruising: '',
+        obesity: '',
+        swollenLegs: '',
+        swollenBloodVessels: '',
+        puffyFaceAndEyes: '',
+        enlargedThyroid: '',
+        brittleNails: '',
+        swollenExtremeties: '',
+        excessiveHunger: '',
+        extraMaritalContacts: '',
+        dryingAndTinglingLips: '',
+        slurredSpeech: '',
+        kneePain: '',
+        hipJointPain: '',
+        muscleWeakness: '',
+        stiffNeck: '',
+        swellingJoints: '',
+        movementStiffness: '',
+        spinningMovements: '',
+        lossOfBalance: '',
+        unsteadiness: '',
+        weaknessOfOneBodySide: '',
+        lossOfSmell: '',
+        bladderDiscomfort: '',
+        foulSmellOfUrine: '',
+        continuousFeelOfUrine: '',
+        passageOfGases: '',
+        internalItching: '',
+        toxicLook: '',
+        depression: '',
+        irritability: '',
+        musclePain: '',
+        alteredSensorium: '',
+        redSpotsOverBody: '',
+        bellyPain: '',
+        abnormalMenstruation: '',
+        dischromicPatches: '',
+        wateringFromEyes: '',
+        increasedAppetite: '',
+        polyuria: '',
+        familyHistory: '',
+        mucoidSputum: '',
+        rustySputum: '',
+        lackOfConcentration: '',
+        visualDisturbances: '',
+        receivingBloodTransfusion: '',
+        receivingUnsterileInjections: '',
+        coma: '',
+        stomachBleeding: '',
+        distentionOfAbdomen: '',
+        historyOfAlcoholConsumption: '',
+        fluidOverload: '',
+        bloodInSputum: '',
+        prominentVeinsOnCalf: '',
+        palpitations: '',
+        painfulWalking: '',
+        pusFilledPimples: '',
+        blackheads: '',
+        scurring: '',
+        skinPeeling: '',
+        silverLikeDusting: '',
+        smallDentsInNails: '',
+        inflammatoryNails: '',
+        blister: '',
+        redSoreAroundNose: '',
+        yellowCrustOoze: '',
+      } 
     };
   },
   methods: {
