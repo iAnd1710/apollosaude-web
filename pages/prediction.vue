@@ -186,7 +186,7 @@ export default {
         blackheads: 'Cravos pretos',
         scurring: 'Pressa',
         skinPeeling: 'Descamação da pele',
-        silverLikeDusting: 'prata como poeira',
+        silverLikeDusting: 'exposição a prata como poeira',
         smallDentsInNails: 'Pequenas marcas nas unhas',
         inflammatoryNails: 'Unhas inflamadas',
         blister: 'Bolha',
