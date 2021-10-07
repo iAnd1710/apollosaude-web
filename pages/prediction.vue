@@ -64,7 +64,7 @@ export default {
         itching: 'Coceira',
         skinRash: 'Erupção cutânea',
         nodalSkinEruptions: 'Erupção nodal na pele',
-        continuousSneezing: 'Espirro contínuo',
+        continuousSneezing: 'Espirros contínuos',
         shivering: 'Tremedeira',
         chills: 'Arrepios',
         jointPain: 'Dor nas articulações',
