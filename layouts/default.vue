@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-app-bar
-      color='white'
+      color="rgba(255, 255, 255, 0.7)"
       :height='appBarHeight'
       :class="isMobile ? 'px-2' : 'px-10'"
       fixed
@@ -17,7 +17,7 @@
 
       <v-btn v-if='!isMobile' rounded color='white' elevation='0' class='mx-3 text-uppercase' href='/account/login'>{{ words.logIn }}</v-btn>
 
-      <v-btn v-if='!isMobile' rounded color='primary' elevation='0' class='mx-3 text-uppercase' href='/prediction'>{{ words.disease }}</v-btn>
+      <v-btn v-if='!isMobile' rounded color="rgba(102,61,239,0.2)" elevation='0' class='mx-3 text-uppercase' href='/prediction'>{{ words.disease }}</v-btn>
 
       <v-btn v-if='isMobile' color='primary' icon @click.stop="drawer = !drawer">
         <v-icon large>{{ drawer ? 'close' : 'drag_handle' }}</v-icon>
