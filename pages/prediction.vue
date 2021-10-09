@@ -22,17 +22,7 @@
               class="form-control"
               id="symptom"
             >
-              <option value="Itching" selected>{{ words.itching }}</option>
-              <option value="skin_rash" selected></option>
-              <option value="nodal_skin_eruptions" selected></option>
-              <option value="continuous_sneezing" selected></option>
-              <option value="shivering" selected></option>
-              <option value="chills" selected></option>
-              <option value="joint_pain" selected></option>
-              <option value="stomach_pain" selected></option>
-              <option value="acidity" selected></option>
-              <option value="ulcers_on_tongue" selected></option>
-              <option value="muscle_wasting" selected></option>
+              <option value="Acidity" selected>{{ words.acidity }}</option>
               <option value="Vomiting" selected></option>
             </select>
           </div>
@@ -66,7 +56,6 @@ export default {
         acidity: 'Acidez',
         anxiety: 'Ansiedade',
         toxicLook: 'Aparencia toxica(tifo)',
-        anxiety: 'Ansiedade',
         increasedAppetite: 'Aumento do apetite',
         blister: 'Bolha',
         phlegm: 'Catarro',
@@ -191,7 +180,7 @@ export default {
         prominentVeinsOnCalf: 'Veias proeminentes na panturrilha',
         rednessOfEyes: 'Vermelhidão nos olhos',
         blurredAndDistortedVision: 'Visão turva e distorcida',
-        vomiting: 'vômito',
+        vomiting: 'Vômito',
       } 
     };
   },
