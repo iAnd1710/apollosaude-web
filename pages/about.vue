@@ -48,6 +48,7 @@
                   width="46px"
                   height="46px"
                   class="justify-center mt-0"
+                  target="_blank"
                   href="https://www.linkedin.com/in/andre-lima-inacio/">
                   <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
                 </v-btn>
@@ -127,6 +128,7 @@
                   width="46px"
                   height="46px"
                   class="justify-center mt-0"
+                  target="blank"
                   href="https://www.linkedin.com/in/gustavomaedo">
                   <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
                 </v-btn>
@@ -168,6 +170,7 @@
                   width="46px"
                   height="46px"
                   class="justify-center mt-0"
+                  target="blank"
                   href="https://www.linkedin.com/in/joaovictorms">
                   <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
                 </v-btn>
@@ -210,6 +213,7 @@
                     width="46px"
                     height="46px"
                     class="justify-center mt-0"
+                    target="blank"
                     href="https://www.linkedin.com/in/leandrolimaeng">
                     <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
                   </v-btn>
@@ -250,6 +254,7 @@
                     width="46px"
                     height="46px"
                     class="justify-center mt-0"
+                    target="blank"
                     href="https://www.linkedin.com/in/rodrigo-tawata-3777a9195">
                     <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
                   </v-btn>
