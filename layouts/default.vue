@@ -5,17 +5,16 @@
       :height='appBarHeight'
       :class="isMobile ? 'px-2' : 'px-10'"
       fixed
-      app
-    >
+      app>
       <v-toolbar-title>
         <NuxtLink to='/'>
-          <img src='/static/images/apollohealth-logo.svg' :class="`black-filter ${isMobile ? '' : 'mx-3'}`" :height='logoHeight' alt='Apollo Health'/>
+          <ApolloIcon height="120px" width="30%"/>
         </NuxtLink>
       </v-toolbar-title>
 
       <v-spacer />
 
-      <v-btn v-if='!isMobile' rounded color='white' elevation='0' class='mx-3 text-uppercase' href='/account/login'>{{ words.logIn }}</v-btn>
+      <v-btn v-if='!isMobile' rounded color='white' elevation='0' class='mx-3 text-uppercase' href='/about'>{{ words.about }}</v-btn>
 
       <v-btn v-if='!isMobile' rounded color="rgba(102,61,239,0.2)" elevation='0' class='mx-3 text-uppercase' href='/prediction'>{{ words.disease }}</v-btn>
 
@@ -73,6 +72,7 @@
 </template>
 
 <script>
+import ApolloIcon from '/static/images/apollohealth-logo.svg'
 export default {
   data () {
     return {
@@ -91,7 +91,7 @@ export default {
         projects: 'Projetos',
         disease: 'Fazer Diagnóstico',
         contact: 'Contato',
-        logIn: 'Entrar',
+        about: 'Sobre a Apollo',
         services: 'Serviços',
         products: 'Nossos produtos',
         apps: 'Aplicativos',
@@ -104,6 +104,9 @@ export default {
         copyright: `© 2021 Apollo Health`
       },
     }
+  },
+  components: {
+    ApolloIcon,
   },
   computed: {
     isMobile () {
