@@ -22,8 +22,8 @@
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">article</v-icon> Exames </div>
             <div class="mt-2 text--primary font-weight-bold">2 resultados disponiveis</div>
-            <div class="mt-2 text-subtitle-1 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 11/10/2021 </div>
-            <div class="mt-2 text-subtitle-1 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 15/07/2021 </div>
+            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 11/10/2021 </div>
+            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 04/10/2021 </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
@@ -41,7 +41,7 @@
           width="45%"
         >
           <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">forum</v-icon> Atendimento </div>
+            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">forum</v-icon> Consultas </div>
             <p>Mensagem:</p>
             <div class="text--primary font-weight-bold"> Dr.Gustavo  </div>
             <div>Bom dia, paciente<br>Está se sentimento melhor?</div>
@@ -90,7 +90,7 @@
           <v-card-actions>
             <v-btn
               class="mb-1"
-              href="/cards/agenda"
+              href="/cards/receitas"
               text
               color="deep-purple accent-4"
             >Todas as Receitas
