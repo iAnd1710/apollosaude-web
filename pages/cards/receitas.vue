@@ -13,27 +13,27 @@
               class="mx-auto mt-13"
               max-width="800">
               <v-card-title class="font-weight-bold white--text pl-0"> Suas receitas </v-card-title>
-              <v-list-item target="_blank" href="https://drive.google.com/file/d/1cR4QHUMsm2-x8rJbt01bg4Pn4L0s0cab/view?usp=sharing">
+              <v-list-item target="_blank" href="https://drive.google.com/file/d/1PwfoSBlwA9vbHAJaCcdYbYNaibtGUlVS/view?usp=sharing">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
-                      <LabIcon class="pr-5 filter-black" height="20px"></LabIcon>
+                      <v-icon size="23" color="white" class="pr-5">health_and_safety</v-icon>
                       <v-row class="ml-0 mr-0" justify="space-between" align="center">
-                          <div class="white--text text-subtitle-1 font-weight-bold"> Dr. Luciano Rigoni Calleri </div>
-                          <div class="white--text text-body-2"> Ortopedista </div>
-                          <div class="white--text text-overline align-center">14/10/2021</div>
+                          <div class="white--text text-subtitle-1 font-weight-bold">Dr. Gelol</div>
+                          <div class="white--text text-body-2"> Dermatologista </div>
+                          <div class="white--text text-overline align-center">08/10/2021</div>
                       </v-row>  
                     </v-row>                  
                   </v-list-item-content>
               </v-list-item>
               <v-divider></v-divider>
-              <v-list-item target="_blank" href="https://drive.google.com/file/d/1PwfoSBlwA9vbHAJaCcdYbYNaibtGUlVS/view?usp=sharing">
+              <v-list-item target="_blank" href="https://drive.google.com/file/d/1cR4QHUMsm2-x8rJbt01bg4Pn4L0s0cab/view?usp=sharing">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
-                      <LabIcon class="pr-5 filter-black" height="20px"></LabIcon>
+                      <v-icon size="23" color="white" class="pr-5">health_and_safety</v-icon>
                       <v-row class="ml-0 mr-0" justify="space-between" align="center">
-                          <div class="white--text text-subtitle-1 font-weight-bold">Dr. Gelol</div>
-                          <div class="white--text text-body-2"> Dermatologista </div>
-                          <div class="white--text text-overline align-center">15/07/2021</div>
+                          <div class="white--text text-subtitle-1 font-weight-bold"> Dr. Luciano Rigoni Calleri </div>
+                          <div class="white--text text-body-2"> Ortopedista </div>
+                          <div class="white--text text-overline align-center">01/10/2021</div>
                       </v-row>  
                     </v-row>                  
                   </v-list-item-content>
