@@ -112,33 +112,86 @@
       selectedElement: null,
       selectedOpen: false,
       events: [
-          {
-            name: 'Dermatologista',
-            start: '2021-10-08 14:00',
-            end: '2021-10-08 14:30',
-            color: "rgba(0, 0, 0, 0.5)",
-            details: "Consulta com o Dr. João"
-          },
-          {
-            name: 'Tomar Enantato de Trembolona',
-            start: '2021-10-5 20:00',
-            color: "rgba(0, 0, 0, 0.5)"
-          },
-          {
-            name: 'Tomar GH',
-            start: '2021-10-07 21:00',
-            color: "rgba(0, 0, 0, 0.5)"
-          },
-          {
-            name: 'Tomar Enantato de Trembolona',
-            start: '2021-10-12 20:00',
-            color: "rgba(0, 0, 0, 0.5)"
-          },
-          {
-            name: 'Tomar Enantato de Trembolona',
-            start: '2021-10-19 20:00',
-            color: "rgba(0, 0, 0, 0.5)"
-          }
+        {
+          name: 'Ortopedista',
+          start: '2021-10-01 13:30',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Consulta com o Dr. Luciano"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-01 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Exame de sangue',
+          start: '2021-10-04 09:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Exame de sangue solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-05 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Dermatologista',
+          start: '2021-10-08 14:00',
+          end: '2021-10-08 14:30',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Consulta com o Dr. Gelol"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-08 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Exame de sangue',
+          start: '2021-10-11 10:00',
+          end: '2021-10-11 11:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Exame de sangue no laboratório Delboni Auriemo"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-12 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Passar Gelol',
+          start: '2021-10-14 15:34',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Passar Gelol por recomendação do Dr. Gelol"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-15 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-19 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-22 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
+        {
+          name: 'Injeção de Urânio Enriquecido',
+          start: '2021-10-26 19:00',
+          color: "rgba(0, 0, 0, 0.5)",
+          details: "Injeção de Urânio Enriquecido solicitado pelo Dr. Luciano"
+        },
       ],
     }),
     mounted () {
