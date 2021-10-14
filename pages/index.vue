@@ -12,18 +12,17 @@
     <v-container class='my-16'></v-container>
     <v-container>
       <v-row
-        justify="space-between">
+        justify="space-around">
         <v-card
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="45%"
+          width="40%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">article</v-icon> Exames </div>
-            <div class="mt-2 text--primary font-weight-bold">2 resultados disponiveis</div>
+            <div class="mt-2 text--primary font-weight-bold">1 novo resultado disponível</div>
             <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 11/10/2021 </div>
-            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 04/10/2021 </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
@@ -38,13 +37,12 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="45%"
+          width="40%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">forum</v-icon> Consultas </div>
-            <p>Mensagem:</p>
-            <div class="text--primary font-weight-bold"> Dr.Gustavo  </div>
-            <div>Bom dia, paciente<br>Está se sentimento melhor?</div>
+            <div class="mt-2 text--primary font-weight-bold">Última consulta:</div>
+            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Consulta com Dr. Gelol realizada no dia 08/10/2021 </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
@@ -57,16 +55,18 @@
         </v-card>
       </v-row>
       <v-row 
-      justify="space-between"
+      justify="space-around"
       class="mt-13">
         <v-card
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="45%"
+          width="40%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">today</v-icon> Agenda </div>
+            <div class="mt-2 text--primary font-weight-bold">Eventos de hoje:</div>
+            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon> 19:00 - Injeção de Urânio Enriquecido  </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
@@ -82,10 +82,12 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="45%"
+          width="40%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">receipt</v-icon> Receitas </div>
+            <div class="mt-2 text--primary font-weight-bold">Você tem 1 receita em curso:</div>
+            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon> Receita por Dr. Luciano Rigoni Calleri no dia 01/10/2021  </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
@@ -101,12 +103,12 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="45%"
+          width="40%"
           class="mt-13"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">credit_card</v-icon> Carteirinha </div>
-            <Icon2 class="mt-4"  style="height:250; width:100%" />            
+            <Icon2 class="mt-7"  style="height:220; width:100%" />            
           </v-card-text>
           <v-card-actions>
 
