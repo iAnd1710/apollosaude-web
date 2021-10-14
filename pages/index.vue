@@ -27,7 +27,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn
-              href="/cards/exames"
+              href="/exames"
               text
               color="deep-purple accent-4"
             >Todos os exames
@@ -49,7 +49,7 @@
           <v-card-actions>
             <v-btn
               text
-              href="/cards/consulta"
+              href="/consulta"
               color="deep-purple accent-4"
             >Todas as consultas
             </v-btn>
@@ -71,7 +71,7 @@
           <v-card-actions>
             <v-btn
               class="mb-1"
-              href="/cards/agenda"
+              href="/agenda"
               text
               color="deep-purple accent-4"
             >Agenda completa
@@ -90,7 +90,7 @@
           <v-card-actions>
             <v-btn
               class="mb-1"
-              href="/cards/receitas"
+              href="/receitas"
               text
               color="deep-purple accent-4"
             >Todas as Receitas

@@ -20,10 +20,20 @@
             <select
               v-model.trim="diseasedata.symptoms"
               class="form-control"
-              id="symptom"
-            >
+              id="symptom">
               <option value="Acidity" selected>{{ words.acidity }}</option>
-              <option value="Vomiting" selected></option>
+              <option value="Vomiting" selected>{{ words.vomiting }}</option>
+            </select>
+          </div>
+
+          <div class="form-group col-12">
+            <label for="symptom">Sintoma</label>
+            <select
+              v-model.trim="diseasedata.symptoms"
+              class="form-control"
+              id="symptom">
+              <option value="Acidity" selected>{{ words.acidity }}</option>
+              <option value="Vomiting" selected>{{ words.vomiting }}</option>
             </select>
           </div>
 
@@ -31,8 +41,7 @@
             v-on:click="predict"
             @click="predict"
             type="button"
-            class="btn btn-primary btn-lg btn-block"
-          >
+            class="btn btn-primary btn-lg btn-block">
             Confirmar
           </button>
         </div>
