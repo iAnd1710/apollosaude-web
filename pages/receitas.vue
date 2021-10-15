@@ -1,7 +1,7 @@
 <template>
     <v-app style="background-color:rgba(0, 0, 0, 0);">
         <div class="mt-2 white--text text-h6">
-            Nesta página estão todas as suas receitas, você pode escolher receber os nossos <a class="text-decoration-underline primRY-text">kits</a> que contém os remédios de sua receita.
+            Nesta página estão todas as suas receitas, você pode escolher receber os nossos <a href="./kits" class="text-decoration-underline primRY-text">kits</a> que contém os remédios de sua receita.
         </div>
         <v-divider class="mt-5 mb-5"></v-divider>
         <h5 class="mt-5 white--text text-h5">Olá, Apollo</h5>
