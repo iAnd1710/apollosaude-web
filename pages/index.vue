@@ -17,7 +17,7 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="40%"
+          width="21%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">article</v-icon> Exames </div>
@@ -37,7 +37,7 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="40%"
+          width="21%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">forum</v-icon> Consultas </div>
@@ -53,15 +53,11 @@
             </v-btn>
           </v-card-actions>
         </v-card>
-      </v-row>
-      <v-row 
-      justify="space-around"
-      class="mt-13">
         <v-card
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="40%"
+          width="21%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">today</v-icon> Agenda </div>
@@ -70,7 +66,7 @@
           </v-card-text>
           <v-card-actions>
             <v-btn
-              class="mb-1"
+              class="mb-0 pb-0"
               href="/agenda"
               text
               color="deep-purple accent-4"
@@ -82,16 +78,16 @@
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="40%"
+          width="21%"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">receipt</v-icon> Receitas </div>
-            <div class="mt-2 text--primary font-weight-bold">Você tem 1 receita em curso:</div>
+            <div class="mt-2 text--primary font-weight-bold">1 receita em curso:</div>
             <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon> Receita por Dr. Luciano Rigoni Calleri no dia 01/10/2021  </div>
           </v-card-text>
           <v-card-actions>
             <v-btn
-              class="mb-1"
+              class="mb-0 pb-0"
               href="/receitas"
               text
               color="deep-purple accent-4"
@@ -99,16 +95,18 @@
             </v-btn>
           </v-card-actions>
         </v-card>
+      </v-row>
+      <v-row justify="center">
         <v-card
           color="rgba(255,255,255,0.7)"
           elevation="12"
           rounded="lg"
-          width="40%"
+          width="42%"
           class="mt-13"
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">credit_card</v-icon> Carteirinha </div>
-            <Icon2 class="mt-7"  style="height:220; width:100%" />            
+            <Icon2 class="mt-6"  style="height:220; width:100%" />            
           </v-card-text>
           <v-card-actions>
 
