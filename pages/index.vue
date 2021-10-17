@@ -1,158 +1,292 @@
 <template>
-<v-app style="background-color:rgba(0, 0, 0, 0);">
-  <v-container>
-    <v-col justify="center" align='center' class='my-16'>
-      <Icon class="filter-black" :height=logoSize />
-      <div class='title ma-5'>
-        <div :class="`font-weight-bold white--text ${titleSize}`">Aqui você não morre</div>
-      </div>
-      <div :class='titleMargin'>
-      </div>
-    </v-col>
-    <v-container class='my-16'></v-container>
+  <v-app style="background-color: rgba(0, 0, 0, 0)">
     <v-container>
-      <v-row
-        justify="space-around">
-        <v-card
-          color="rgba(255,255,255,0.7)"
-          elevation="12"
-          rounded="lg"
-          width="21%"
-        >
-          <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">article</v-icon> Exames </div>
-            <div class="mt-2 text--primary font-weight-bold">1 novo resultado disponível</div>
-            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Exame de sangue realizado no dia 11/10/2021 </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              href="/exames"
-              text
-              color="deep-purple accent-4"
-            >Todos os exames
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card
-          color="rgba(255,255,255,0.7)"
-          elevation="12"
-          rounded="lg"
-          width="21%"
-        >
-          <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">forum</v-icon> Consultas </div>
-            <div class="mt-2 text--primary font-weight-bold">Última consulta:</div>
-            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon>  Consulta com Dr. Gelol realizada no dia 08/10/2021 </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              text
-              href="/consulta"
-              color="deep-purple accent-4"
-            >Todas as consultas
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card
-          color="rgba(255,255,255,0.7)"
-          elevation="12"
-          rounded="lg"
-          width="21%"
-        >
-          <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">today</v-icon> Agenda </div>
-            <div class="mt-2 text--primary font-weight-bold">Eventos de hoje:</div>
-            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon> 19:00 - Injeção de Urânio Enriquecido  </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              class="mb-0 pb-0"
-              href="/agenda"
-              text
-              color="deep-purple accent-4"
-            >Agenda completa
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card
-          color="rgba(255,255,255,0.7)"
-          elevation="12"
-          rounded="lg"
-          width="21%"
-        >
-          <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">receipt</v-icon> Receitas </div>
-            <div class="mt-2 text--primary font-weight-bold">1 receita em curso:</div>
-            <div class="mt-2 text-subtitle-2 text--primary"><v-icon size="12" color=rgba(0,32,245,255)>circle</v-icon> Receita por Dr. Luciano Rigoni Calleri no dia 01/10/2021  </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              class="mb-0 pb-0"
-              href="/receitas"
-              text
-              color="deep-purple accent-4"
-            >Todas as Receitas
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-row>
-      <v-row justify="center">
-        <v-card
-          color="rgba(255,255,255,0.7)"
-          elevation="12"
-          rounded="lg"
-          width="42%"
-          class="mt-13"
-        >
-          <v-card-text>
-            <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">credit_card</v-icon> Carteirinha </div>
-            <Icon2 class="mt-6"  style="height:220; width:100%" />            
-          </v-card-text>
-          <v-card-actions>
+      <v-col justify="center" align='center' class='my-10'>
+        <div :class='titleMargin'>
+        </div>
+        <div align="start" class='white--text mt-0'>
+          <h1 class="text-center text-h4 font-weight-bold"> Como surgimos </h1>
+          <h3 class="text-center text-h6 mt-3">{{ texts.begin }}</h3>
+        </div>
+        <v-divider class="mt-10"></v-divider>
+        <div class="white--text mt-10 p-0">
+          <h1 class="text-h4 font-weight-bold"> Nossa missão </h1>
+          <p class="text-center text-h6 mt-3">{{ texts.ourMission }}</p>
+        </div>
+      </v-col>
+      <v-container class='my-16'></v-container>
+      
+      <v-row justify="space-between">
+      <v-card
+        elevation="24"
+        rounded="lg"
+        max-width="434"
+        color="rgba(255,255,255,0.5)">
+        <v-img
+          height="100%"
+          class="pb-3">
+          <v-row>
+            <v-col
+              align-self="start"
+              class="pa-0"
+              cols="12">
+              <v-avatar
+                class="profile"
+                size="116">
+                <v-img :src="andreImage"></v-img>
+              </v-avatar>
+            </v-col>
+            <v-col class="py-0">
+              <v-list-item dark>
+                <v-list-item-content>
+                  <v-list-item-title class="text-h6">André Lima Inácio</v-list-item-title>
+                  <v-list-item-subtitle>Full Stack Developer</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-btn 
+                  color="rgba(0, 0, 0, 0.5)"
+                  min-width="0"
+                  width="46px"
+                  height="46px"
+                  class="justify-center mt-0"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/andre-lima-inacio/">
+                  <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                </v-btn>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-card>
+      <v-card
+        elevation="24"
+        rounded="lg"
+        max-width="434"
+        color="rgba(255,255,255,0.5)">
+        <v-img
+          height="100%"
+          class="pb-3">
+          <v-row>
+            <v-col
+              align-self="start"
+              class="pa-0"
+              cols="12">
+              <v-avatar
+                class="profile"
+                size="116">
+                <v-img src="https://cdn.vuetifyjs.com/images/profiles/marcus.jpg"></v-img>
+              </v-avatar>
+            </v-col>
+            <v-col class="py-0">
+              <v-list-item dark>
+                <v-list-item-content>
+                  <v-list-item-title class="text-h6">Guilherme de Paula Soares</v-list-item-title>
+                  <v-list-item-subtitle>Front-End Developer</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-btn 
+                  color="rgba(0, 0, 0, 0.5)"
+                  min-width="0"
+                  width="46px"
+                  height="46px"
+                  class="justify-center mt-0"
+                  href="">
+                  <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                </v-btn>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-card>
+      <v-card
+        class="mt-6"
+        elevation="24"
+        rounded="lg"
+        max-width="434"
+        color="rgba(255,255,255,0.5)">
+        <v-img
+          height="100%"
+          class="pb-3">
+          <v-row>
+            <v-col
+              align-self="start"
+              class="pa-0"
+              cols="12">
+              <v-avatar
+                class="profile"
+                size="116">
+                <v-img :src="gustavoImage"></v-img>
+              </v-avatar>
+            </v-col>
+            <v-col class="py-0">
+              <v-list-item dark>
+                <v-list-item-content>
+                  <v-list-item-title class="text-h6">Gustavo Maedo Santos</v-list-item-title>
+                  <v-list-item-subtitle>Full Stack Developer</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-btn 
+                  color="rgba(0, 0, 0, 0.5)"
+                  min-width="0"
+                  width="46px"
+                  height="46px"
+                  class="justify-center mt-0"
+                  target="blank"
+                  href="https://www.linkedin.com/in/gustavomaedo">
+                  <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                </v-btn>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-card>
 
-          </v-card-actions>
+      <v-card
+        class="mt-6"
+        elevation="24"
+        rounded="lg"
+        max-width="434"
+        color="rgba(255,255,255,0.5)">
+        <v-img
+          height="100%"
+          class="pb-3">
+          <v-row>
+            <v-col
+              align-self="start"
+              class="pa-0"
+              cols="12">
+              <v-avatar
+                class="profile"
+                size="116">
+                <v-img :src="joaoImage"></v-img>
+              </v-avatar>
+            </v-col>
+            <v-col class="py-0">
+              <v-list-item dark>
+                <v-list-item-content>
+                  <v-list-item-title class="text-h6">João Victor Martins</v-list-item-title>
+                  <v-list-item-subtitle>Product Manager</v-list-item-subtitle>
+                </v-list-item-content>
+                <v-btn 
+                  color="rgba(0, 0, 0, 0.5)"
+                  min-width="0"
+                  width="46px"
+                  height="46px"
+                  class="justify-center mt-0"
+                  target="blank"
+                  href="https://www.linkedin.com/in/joaovictorms">
+                  <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                </v-btn>
+              </v-list-item>
+            </v-col>
+          </v-row>
+        </v-img>
+      </v-card>
+      </v-row>
+      <v-row justify="space-between">
+        <v-card
+          class="mt-6"
+          elevation="24"
+          rounded="lg"
+          max-width="434"
+          color="rgba(255,255,255,0.5)">
+          <v-img
+            height="100%"
+            class="pb-3">
+            <v-row>
+              <v-col
+                align-self="start"
+                class="pa-0"
+                cols="12">
+                <v-avatar
+                  class="profile"
+                  size="116">
+                  <v-img :src="leandroImage"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col class="py-0">
+                <v-list-item dark>
+                  <v-list-item-content>
+                    <v-list-item-title class="text-h6">Leandro Lima dos Santos</v-list-item-title>
+                    <v-list-item-subtitle>Graphic Designer</v-list-item-subtitle>
+                  </v-list-item-content>
+                  <v-btn 
+                    color="rgba(0, 0, 0, 0.5)"
+                    min-width="0"
+                    width="46px"
+                    height="46px"
+                    class="justify-center mt-0"
+                    target="blank"
+                    href="https://www.linkedin.com/in/leandrolimaeng">
+                    <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                  </v-btn>
+                </v-list-item>
+              </v-col>
+            </v-row>
+          </v-img>
+        </v-card>
+        <v-card
+          class="mt-6"
+          elevation="24"
+          rounded="lg"
+          max-width="434"
+          color="rgba(255,255,255,0.5)">
+          <v-img
+            height="100%"
+            class="pb-3">
+            <v-row>
+              <v-col
+                align-self="start"
+                class="pa-0"
+                cols="12">
+                <v-avatar
+                  class="profile"
+                  size="116">
+                  <v-img :src="rodrigoImage"></v-img>
+                </v-avatar>
+              </v-col>
+              <v-col class="py-0">
+                <v-list-item dark>
+                  <v-list-item-content>
+                    <v-list-item-title class="text-h6">Rodrigo Takeshi Kamei Tawata</v-list-item-title>
+                    <v-list-item-subtitle>Front-End Developer</v-list-item-subtitle>
+                  </v-list-item-content>
+                  <v-btn 
+                    color="rgba(0, 0, 0, 0.5)"
+                    min-width="0"
+                    width="46px"
+                    height="46px"
+                    class="justify-center mt-0"
+                    target="blank"
+                    href="https://www.linkedin.com/in/rodrigo-tawata-3777a9195">
+                    <linkedinIcon class="filter-white" height="28px"></linkedinIcon>
+                  </v-btn>
+                </v-list-item>
+              </v-col>
+            </v-row>
+          </v-img>
         </v-card>
       </v-row>
+      <v-container class='my-16'></v-container>
     </v-container>
-    <v-container class='my-16'></v-container>
-  </v-container>
-</v-app>
+  </v-app>
 </template>
 
 <script>
-import Icon from '/static/images/apollohealth-logo.svg'
-import Icon2 from '/static/images/carteirinha.svg'
+import linkedinIcon from '@/static/icons/linkedin-icon.svg'
 export default {
-  data: function(){
-    return{
+  data () {
+    return {
+      andreImage: require('@/static/images/team/andre.jpg'),
+      gustavoImage: require('@/static/images/team/gustavo.jpg'),
+      joaoImage: require('@/static/images/team/joao.jpg'),
+      leandroImage: require('@/static/images/team/leandro.jpg'),
+      rodrigoImage: require('@/static/images/team/rodrigo.jpg'),
+      texts: {
+        begin: 'O apollo saúde é um projeto que foi iniciado após um desafio proposto pela Roche para os alunos do 3º ano de Engenharia Mecatrônica da FIAP, e o desafio é digitalizar o setor da saúde, impactá-lo através do meio digital e virtualizar o atendimento médico.',
+        ourMission: 'Nossa missão é direcionar o paciente o mais rápido possível aos profissionais da saúde, bastando apenas entrar em nossa plataforma e fazer um pré diagnóstico com nosso modelo baseado em Inteligência Artificial, assim o paciente será redirecionado para um médico especialista. Após isso, o paciente pode conversar com este médico e marcar uma videochamada ou até mesmo uma consulta, e se precisar, marcar exames com os nossos laboratórios parceiros. Os resultados e receitas são todos digitais, e o paciente poderá receber a nossa mail box contendo todos os remédios prescritos pelos seus médicos.',
+      }
     }
   },
-  components:{
-    Icon,
-    Icon2
-  },
-  computed: {
-    logoSize () {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 60
-        case 'sm': return 70
-        default: return 120
-      }
-    },
-    titleSize () {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 'text-h4'
-        case 'sm': return 'text-h3'
-        default: return 'text-h3'
-      }
-    },
-    titleMargin () {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 'mt-2'
-        case 'sm': return 'mt-4'
-        default: return 'mt-6'
-      }
-    },
+  components: {
+    linkedinIcon,
   },
 }
 </script>
@@ -161,10 +295,10 @@ export default {
 .v-main 
   background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
-  max-width: 500px
+  max-width: 5px
 .span
   display: inline-block
-  line-height: 12px
-.filter-black
-  filter: invert(100%)
+  line-height: 5px
+.filter-white
+  filter: brightness(0%) invert(100%)
 </style>

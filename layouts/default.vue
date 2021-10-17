@@ -1,57 +1,20 @@
 <template>
   <v-app light>
     <v-app-bar
-      color="rgba(255, 255, 255, 0.7)"
-      :height='appBarHeight'
-      :class="isMobile ? 'px-2' : 'px-10'"
+      color=white
       fixed
       app>
       <v-toolbar-title>
         <NuxtLink to='/'>
-          <ApolloIcon height="120px" width="30%"/>
+          <img src='/images/apollohealth-logo.svg' class='black-filter mx-3 mt-3' :height='logoHeight' alt='Apollo Saúde'/>
         </NuxtLink>
       </v-toolbar-title>
 
       <v-spacer />
 
-      <v-btn v-if='!isMobile' rounded color='white' elevation='0' class='mx-3 text-uppercase' href='/about'>{{ words.about }}</v-btn>
-
-      <v-btn v-if='!isMobile' rounded color="rgba(102,61,239,0.2)" elevation='0' class='mx-3 text-uppercase' href='/prediction'>{{ words.disease }}</v-btn>
-
-      <v-btn v-if='isMobile' color='primary' icon @click.stop="drawer = !drawer">
-        <v-icon large>{{ drawer ? 'close' : 'drag_handle' }}</v-icon>
-      </v-btn>
+      <v-btn rounded color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
 
     </v-app-bar>
-
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      fixed
-      clipped
-      width='100%'
-    >
-      <v-list
-        nav
-        flat
-        class='my-16 mx-3 pt-20'
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="primary--text"
-        >
-          <v-container class='my-10'></v-container>
-          <v-list-item to='/account/sign-up'>
-            <v-list-item-title class='text-h4 font-weight-bold'>{{ words.signUp }}</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item to='/account/login'>
-            <v-list-item-title class='text-h4 font-weight-bold'>{{ words.logIn }}</v-list-item-title>
-          </v-list-item>
-
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
 
     <v-main>
       <v-container class='router-container'>
@@ -60,9 +23,15 @@
     </v-main>
     <v-footer app color='#121212' absolute class='pa-10 footer'>
       <v-col>
-
+        <v-row class='mb-10'>
+          <v-col class='mr-10 mb-10'>
+            <div class='mb-6 white--text text-h6 font-weight-light'>{{ words.talkToUs }}</div>
+            <div class='px-0 mb-1 text-h6'><a :href='links.whats' target="_blank">{{ words.whatsContact }}</a></div>
+            <div class='px-0 mb-1 text-h6'><a :href='"mailto:"+links.email' target="_blank">{{ links.email }}</a></div>
+          </v-col>
+        </v-row>
         <v-row>
-          <img src='/static/images/apollohealth-logo.svg' class='white-filter mx-3' :height='logoHeight' alt='Apollo Saúde'/>
+          <img src='/images/apollohealth-logo.svg' class='white-filter mx-3' :height='logoHeight' alt='Apollo Saúde'/>
           <v-spacer />
           <div class='white--text ma-3 font-weight-light text-h7'>{{ words.copyright }}</div>
         </v-row>
@@ -72,7 +41,6 @@
 </template>
 
 <script>
-import ApolloIcon from '/static/images/apollohealth-logo.svg'
 export default {
   data () {
     return {
@@ -80,7 +48,7 @@ export default {
       group: null,
       links: {
         whats: 'https://wa.me/551143958867?lang=pt_br&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Apollo Saúde%21',
-        email: 'contato@saude.apptime.com.br'
+        email: 'contato@apptime.com.br'
       },
       watch: {
         group () {
@@ -90,6 +58,7 @@ export default {
       words: {
         projects: 'Projetos',
         disease: 'Fazer Diagnóstico',
+        login: 'Entrar',
         contact: 'Contato',
         about: 'Sobre a Apollo',
         services: 'Serviços',
@@ -105,23 +74,14 @@ export default {
       },
     }
   },
-  components: {
-    ApolloIcon,
-  },
   computed: {
     isMobile () {
       return this.$vuetify.breakpoint.smAndDown
     },
-    appBarHeight () {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 80
-        default: return 120
-      }
-    },
     logoHeight () {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 35
-        default: return 40
+        case 'xs': return 25
+        default: return 32
       }
     },
   },

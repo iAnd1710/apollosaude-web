@@ -21,7 +21,7 @@ export default {
       { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://saude.apptime.com.br/' },
       { hid: 'og:type', name: 'og:type', property: 'og:type', content: 'company' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'theme-color', content: '#FF0000' },
+      { name: 'theme-color', content: '#0a00ff' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -81,7 +81,7 @@ export default {
       ogImage: 'https://saude.apptime.com.br/images/apollohealth-square-150.png',
       image: 'https://saude.apptime.com.br/images/apollohealth-square-150.png',
       ogType: 'company',
-      theme_color: '#FF0000',
+      theme_color: '#0a00ff',
       background_color:'#FFFFFF',
     },
     manifest: {
@@ -150,9 +150,9 @@ export default {
       dark: false,
       themes: {
         light: {
-          primary: '#FF0012',
-          accent: '#FF00F0',
-          secondary: colors.pink,
+          primary: '#0a00ff',
+          accent: '#ff00e2',
+          secondary: colors.purple,
           info: colors.blue.accent3,
           warning: colors.amber.accent3,
           error: colors.red.accent2,
