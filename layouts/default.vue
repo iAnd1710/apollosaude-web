@@ -62,7 +62,7 @@
       <v-col>
 
         <v-row>
-          <img src='/static/images/apollohealth-logo.svg' class='white-filter mx-3' :height='logoHeight' alt='Apollo Health'/>
+          <img src='/static/images/apollohealth-logo.svg' class='white-filter mx-3' :height='logoHeight' alt='Apollo Saúde'/>
           <v-spacer />
           <div class='white--text ma-3 font-weight-light text-h7'>{{ words.copyright }}</div>
         </v-row>
@@ -79,8 +79,8 @@ export default {
       drawer: false,
       group: null,
       links: {
-        whats: 'https://wa.me/551143958867?lang=pt_br&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Apollo Health%21',
-        email: 'contato@apollohealth.app'
+        whats: 'https://wa.me/551143958867?lang=pt_br&text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Apollo Saúde%21',
+        email: 'contato@saude.apptime.com.br'
       },
       watch: {
         group () {
@@ -101,7 +101,7 @@ export default {
         aboutUs: 'Sobre nós',
         talkToUs: 'Fale com a gente',
         whatsContact: '(11) 4395-8867',
-        copyright: `© 2021 Apollo Health`
+        copyright: `© 2021 Apollo Saúde`
       },
     }
   },

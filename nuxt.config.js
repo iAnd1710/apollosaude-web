@@ -6,19 +6,19 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%sApollo Health: compartilhe a sua história',
+    titleTemplate: '%sApollo Saúde: tudo em um só lugar',
     title: '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'og:title', name: 'og:title', property: 'og:title', content: 'Apollo Health: compartilhe a sua história' },
-      { hid: 'description', name: 'description', content: 'Seus melhores flashes e memórias ainda mais inesquecíveis com a Apollo Health!' },
-      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'Seus melhores flashes e memórias ainda mais inesquecíveis com a Apollo Health!' },
-      { hid: 'keywords', name: 'keywords', content: 'Apollo Health, Social, Network, Media, Post, Chat' },
-      { hid: 'author', name: 'author', content: 'Apollo Health Social Network Ltda.' },
-      { hid: 'copyright', name: 'copyright', content: '© Apollo Health Social Network Ltda.' },
-      { hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://apollohealth.app/images/apollohealth-square-150.png' },
-      { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://apollohealth.app/' },
+      { hid: 'og:title', name: 'og:title', property: 'og:title', content: 'Apollo Saúde: tudo em um só lugar' },
+      { hid: 'description', name: 'description', content: 'Saúde com qualidade e tudo o que você precisa sem sair de casa com a Apollo Saúde!' },
+      { hid: 'og:description', name: 'og:description', property: 'og:description', content: 'Saúde com qualidade e tudo o que você precisa sem sair de casa com a Apollo Saúde!' },
+      { hid: 'keywords', name: 'keywords', content: 'Apollo, Saúde, Health' },
+      { hid: 'author', name: 'author', content: 'Apollo Saúde Ltda.' },
+      { hid: 'copyright', name: 'copyright', content: '© Apollo Saúde Ltda.' },
+      { hid: 'og:image', name: 'og:image', property: 'og:image', content: 'https://saude.apptime.com.br/images/apollohealth-square-150.png' },
+      { hid: 'og:url', name: 'og:url', property: 'og:url', content: 'https://saude.apptime.com.br/' },
       { hid: 'og:type', name: 'og:type', property: 'og:type', content: 'company' },
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'theme-color', content: '#FF0000' },
@@ -72,21 +72,21 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     meta: {
-      title: 'Apollo Saúde: compartilhe a sua história',
-      description: 'Seus melhores flashes e memórias ainda mais inesquecíveis com a Apollo Health!',
-      author: 'Apollo Health Social Network Ltda.',
-      ogTitle: 'Apollo Health: compartilhe a sua história',
-      ogDescription: 'Seus melhores flashes e memórias ainda mais inesquecíveis com a Apollo Health!',
-      ogUrl: 'https://apollohealth.app/',
-      ogImage: 'https://apollohealth.app/images/apollohealth-square-150.png',
-      image: 'https://apollohealth.app/images/apollohealth-square-150.png',
+      title: 'Apollo Saúde: tudo em um só lugar',
+      description: 'Saúde com qualidade e tudo o que você precisa sem sair de casa com a Apollo Saúde!',
+      author: 'Apollo Saúde Ltda.',
+      ogTitle: 'Apollo Saúde: tudo em um só lugar',
+      ogDescription: 'Saúde com qualidade e tudo o que você precisa sem sair de casa com a Apollo Saúde!',
+      ogUrl: 'https://saude.apptime.com.br/',
+      ogImage: 'https://saude.apptime.com.br/images/apollohealth-square-150.png',
+      image: 'https://saude.apptime.com.br/images/apollohealth-square-150.png',
       ogType: 'company',
       theme_color: '#FF0000',
       background_color:'#FFFFFF',
     },
     manifest: {
-      name: 'Apollo Health - Apps e Sites',
-      short_name: 'Apollo Health',
+      name: 'Apollo Saúde - Apps e Sites',
+      short_name: 'Apollo Saúde',
       lang: 'br',
       icons:[
         {

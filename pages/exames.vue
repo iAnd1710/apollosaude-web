@@ -9,7 +9,7 @@
               class="mx-auto mt-13"
               max-width="800">
               <v-card-title class="font-weight-bold white--text pl-0"> Seus exames </v-card-title>
-              <v-list-item target="_blank" href="https://drive.google.com/file/d/10VtcO9bVayk4ZJZAvIh_yiGGkP0sMNem/view?usp=sharing">
+              <v-list-item target="_blank" href="/docs/exams/Apollo_Exame_2710196111.pdf">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
                       <LabIcon class="pr-5 filter-black" height="20px"></LabIcon>
@@ -17,12 +17,12 @@
                           <div class="white--text text-subtitle-1 font-weight-bold">Delboni Auriemo</div>
                           <div class="white--text text-body-2">Análises Clínicas</div>
                           <div class="white--text text-overline align-center">11/10/2021</div>
-                      </v-row>  
-                    </v-row>                  
+                      </v-row>
+                    </v-row>
                   </v-list-item-content>
               </v-list-item>
               <v-divider></v-divider>
-              <v-list-item target="_blank" href="https://drive.google.com/file/d/1tNqh9Utmbjma85UZ2j1kjBYRAG5mRL7x/view?usp=sharing">
+              <v-list-item target="_blank" href="/docs/exams/Apollo_Exame_2710196112.pdf">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
                       <LabIcon class="pr-5 filter-black" height="20px"></LabIcon>
@@ -30,8 +30,8 @@
                           <div class="white--text text-subtitle-1 font-weight-bold">Fleury</div>
                           <div class="white--text text-body-2">Análises Clínicas</div>
                           <div class="white--text text-overline align-center">04/10/2021</div>
-                      </v-row>  
-                    </v-row>                  
+                      </v-row>
+                    </v-row>
                   </v-list-item-content>
               </v-list-item>
               <v-card-actions></v-card-actions>
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang='sass'>
-.v-main 
+.v-main
   background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
