@@ -1,5 +1,5 @@
 <template>
-<v-app style="background-color:rgba(0,0,0,0)">
+<v-app>
   <div
     class="d-flex flex-column justify-content-center align-items-center"
     style="height: 80vh;"

@@ -1,20 +1,30 @@
 <template>
-<v-app style="background-color:rgba(0, 0, 0, 0);">
+<v-app>
   <v-container>
-    <v-col justify="center" align='center' class='my-16'>
-      <Icon class="filter-black" :height=logoSize />
-      <div class='title ma-5'>
-        <div :class="`font-weight-bold white--text ${titleSize}`">Aqui você não morre</div>
-      </div>
-      <div :class='titleMargin'>
-      </div>
-    </v-col>
-    <v-container class='my-16'></v-container>
+    <v-container style='background-image: linear-gradient(#0a00ff, #ff00e2)'>
+      <v-col justify="center" align='center' class='my-6'>
+        <div class='title ma-5'>
+          <div align='start' class='mt-0 mb-7'>
+            <h1 class='text-h4 font-weight-bold white--text'>{{hello}},</h1>
+            <p class='text-h5 mt-6 font-weight-bold white--text'>Como está se sentindo hoje?</p>
+          </div>
+          <v-row align='center' class='mt-8' justify='start'>
+            <v-btn fab small elevation='0' color='white' href='/prediction'>
+              <v-icon color='black'>mic</v-icon>
+            </v-btn>
+            <a href='/prediction'><p class='text-h5 ml-4 mt-4 font-weight-bold white--text'>Digite aqui</p></a>
+          </v-row>
+        </div>
+        <div :class='titleMargin'>
+        </div>
+      </v-col>
+    </v-container>
+    <v-container class='my-4'></v-container>
     <v-container>
       <v-row
         justify="space-around">
         <v-card
-          color="rgba(255,255,255,0.7)"
+          color="white"
           elevation="12"
           rounded="lg"
           width="21%"
@@ -34,7 +44,7 @@
           </v-card-actions>
         </v-card>
         <v-card
-          color="rgba(255,255,255,0.7)"
+          color="white"
           elevation="12"
           rounded="lg"
           width="21%"
@@ -54,7 +64,7 @@
           </v-card-actions>
         </v-card>
         <v-card
-          color="rgba(255,255,255,0.7)"
+          color="white"
           elevation="12"
           rounded="lg"
           width="21%"
@@ -75,7 +85,7 @@
           </v-card-actions>
         </v-card>
         <v-card
-          color="rgba(255,255,255,0.7)"
+          color="white"
           elevation="12"
           rounded="lg"
           width="21%"
@@ -98,7 +108,7 @@
       </v-row>
       <v-row justify="center">
         <v-card
-          color="rgba(255,255,255,0.7)"
+          color="white"
           elevation="12"
           rounded="lg"
           width="42%"
@@ -106,7 +116,7 @@
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">credit_card</v-icon> Carteirinha </div>
-            <Icon2 class="mt-6"  style="height:220; width:100%" />
+            <img src='/images/carteirinha.svg' height='220' width='100%' class='mt-6' alt='Card' />
           </v-card-text>
           <v-card-actions>
 
@@ -120,18 +130,16 @@
 </template>
 
 <script>
-import Icon from '/static/images/apollohealth-logo.svg'
-import Icon2 from '/static/images/carteirinha.svg'
 export default {
-  data: function(){
-    return{
-    }
-  },
-  components:{
-    Icon,
-    Icon2
-  },
   computed: {
+    hello () {
+      const current = new Date();
+      if (current.getHours() > 17 || current.getHours() < 5) {
+        return 'Boa noite'
+      } else {
+        return 'Bom dia'
+      }
+    },
     logoSize () {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs': return 60
@@ -163,6 +171,4 @@ export default {
 .span
   display: inline-block
   line-height: 12px
-.filter-black
-  filter: invert(100%)
 </style>

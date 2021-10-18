@@ -11,7 +11,7 @@
       </v-toolbar-title>
       <v-spacer />
 
-      <v-btn v-if='routeName !== "home"' color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
+      <v-btn v-if='routeName === "index"' color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
       <v-btn v-if='routeName !== "index"' color="primary" elevation='0' class='mx-3 text-uppercase' href='/'>{{ words.aboutUs }}</v-btn>
 
     </v-app-bar>

@@ -1,5 +1,5 @@
 <template>
-    <v-app style="background-color:rgba(0, 0, 0, 0);">
+    <v-app>
 
     </v-app>
 </template>
@@ -15,7 +15,7 @@ export default {
 .span
   display: inline-block
   line-height: 12px
-.filter-black
+.black-filter
   filter: invert(100%)
 .v-list-item
     padding: 0
