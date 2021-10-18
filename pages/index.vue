@@ -14,13 +14,43 @@
           </v-col>
           <img src='/illustrations/medicine.svg' width='400' class='ma-16' alt='Technology' />
         </v-row>
+        <v-divider class='mt-10'></v-divider>
         <v-row justify='center' align='center'>
-          <info-card description='Lore dsoij iowoirhf oihjsoifeiosehfjo iiojioj' icon='robot' link='' title='Inteligencia artificial'></info-card>
+          <img src='/illustrations/robot.svg' width='400' class='ma-16' alt='Technology' />
+          <v-col align='start'>
+            <div align='start' class='mt-0 mb-7 mx-4'>
+              <h1 class='text-h4 font-weight-bold'>Médico virtual com inteligência artificial.</h1>
+              <p class='text-h5 mt-6'>Chatbot para te atender 24 horas por dia, de forma simples e rápida.</p>
+            </div>
+          </v-col>
+        </v-row>
+        <v-divider class='mt-10'></v-divider>
+        <v-row justify='center' align='center' class='mt-12 mb-8'>
+          <h1 class='text-h4 font-weight-bold'>Tudo em um só lugar.</h1>
+        </v-row>
+        <v-row justify='center' align='center'>
+          <info-card icon='support_agent' title='Assistente virtual'></info-card>
+          <info-card icon='delivery_dining' title='Entregas à domicílio'></info-card>
+          <info-card icon='remember_me' title='Atendimento à distância'></info-card>
+          <info-card icon='description' title='Prescrições médicas'></info-card>
+          <info-card icon='medication' title='Kits personalizados'></info-card>
+          <info-card icon='explore' title='Locais mais próximos'></info-card>
         </v-row>
         <v-divider class='mt-10'></v-divider>
       </v-col>
       <v-col justify='center' align='center' class='my-10'>
         <v-row justify='center' align='center'>
+          <v-col>
+            <h1 class='text-h4 font-weight-bold'>Para todo lugar no seu bolso.</h1>
+            <img src='/images/apollo-app.png' width='700' alt='App' />
+            <v-row justify='center' align='center'>
+              <img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' />
+              <img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' />
+            </v-row>
+          </v-col>
+        </v-row>
+        <v-divider class='mt-10'></v-divider>
+        <v-row justify='center' align='center' class='mt-10'>
           <img src='/illustrations/doctors.svg' width='400' class='ma-16' alt='Technology' />
           <v-col>
             <div align='start' class='mt-0'>
@@ -55,9 +85,6 @@
                    link='https://www.linkedin.com/in/rodrigo-tawata-3777a9195'></user-card>
       </v-row>
       <v-container class='my-16'></v-container>
-      <v-row class='my-16' align='center' justify='center'>
-        <img src='/images/apollohealth-icon.svg' width='100' class='ma-6' alt='Logo' />
-      </v-row>
       <v-container class='my-16'></v-container>
     </v-container>
   </v-app>
