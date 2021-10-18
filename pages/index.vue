@@ -42,7 +42,7 @@
         <v-row justify='center' align='center'>
           <v-col>
             <h1 class='text-h4 font-weight-bold'>Para todo lugar no seu bolso.</h1>
-            <img src='/images/apollo-app.png' width='700' alt='App' />
+            <img src='/images/apollo-app.png' width='700' alt='App' loading=lazy/>
             <v-row justify='center' align='center'>
               <img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' />
               <img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' />

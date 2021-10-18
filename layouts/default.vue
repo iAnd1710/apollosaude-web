@@ -5,14 +5,14 @@
       fixed
       app>
       <v-toolbar-title>
-        <NuxtLink to='/'>
+        <NuxtLink to='/home'>
           <img src='/images/apollohealth-logo.svg' class='black-filter mx-3 mt-3' :height='logoHeight' alt='Apollo Saúde'/>
         </NuxtLink>
       </v-toolbar-title>
-
       <v-spacer />
 
-      <v-btn color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
+      <v-btn v-if='routeName !== "home"' color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
+      <v-btn v-if='routeName !== "index"' color="primary" elevation='0' class='mx-3 text-uppercase' href='/'>{{ words.aboutUs }}</v-btn>
 
     </v-app-bar>
 
@@ -48,6 +48,7 @@
 export default {
   data () {
     return {
+      routeName: this.$nuxt.$route.name,
       drawer: false,
       group: null,
       links: {
@@ -64,7 +65,7 @@ export default {
         disease: 'Fazer Diagnóstico',
         login: 'Entrar',
         contact: 'Contato',
-        about: 'Sobre a Apollo',
+        about: 'Sobre',
         services: 'Serviços',
         products: 'Nossos produtos',
         apps: 'Aplicativos',
