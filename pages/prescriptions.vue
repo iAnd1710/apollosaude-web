@@ -1,6 +1,10 @@
 <template>
     <v-app>
-      <h5 class="mt-5  text-h5">Olá, Apollo</h5>
+        <div class="mt-2  text-h6">
+            Nesta página estão todas as suas receitas, você pode escolher receber os nossos <NuxtLink to="/kits" class="text-decoration-underline primRY-text">kits</NuxtLink> que contém os remédios de sua receita.
+        </div>
+        <v-divider class="mt-5 mb-5"></v-divider>
+        <h5 class="mt-5  text-h5">Olá, João</h5>
         <section>
           <v-card
               color="rgba(0, 0, 0, 0)"
@@ -8,11 +12,11 @@
               width="100%"
               class="mx-auto mt-13"
               max-width="800">
-              <v-card-title class="font-weight-bold  pl-0"> Suas consultas </v-card-title>
-              <v-list-item target="_blank" href="">
+              <v-card-title class="font-weight-bold  pl-0"> Suas receitas </v-card-title>
+              <v-list-item target="_blank" href="/docs/prescriptions/Apollo_Prescricao_271019612.pdf">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
-                      <LabIcon class="pr-5 black-filter" height="20px"></LabIcon>
+                      <v-icon size="23" color="white" class="pr-5">health_and_safety</v-icon>
                       <v-row class="ml-0 mr-0" justify="space-between" align="center">
                           <div class=" text-subtitle-1 font-weight-bold">Dr. Gelol</div>
                           <div class=" text-body-2"> Dermatologista </div>
@@ -22,10 +26,10 @@
                   </v-list-item-content>
               </v-list-item>
               <v-divider></v-divider>
-              <v-list-item href="./consulta/ortopedista">
+              <v-list-item target="_blank" href="/docs/prescriptions/Apollo_Prescricao_271019611.pdf">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
-                      <LabIcon class="pr-5 black-filter" height="20px"></LabIcon>
+                      <v-icon size="23" color="white" class="pr-5">health_and_safety</v-icon>
                       <v-row class="ml-0 mr-0" justify="space-between" align="center">
                           <div class=" text-subtitle-1 font-weight-bold"> Dr. Luciano Rigoni Calleri </div>
                           <div class=" text-body-2"> Ortopedista </div>

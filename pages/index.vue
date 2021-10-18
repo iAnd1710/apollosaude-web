@@ -12,11 +12,11 @@
             </div>
             <v-btn x-large color='primary' elevation='0' class='mx-3 text-uppercase' href='/home'>Comece agora</v-btn>
           </v-col>
-          <img src='/illustrations/medicine.svg' width='400' class='ma-16' alt='Technology' />
+          <img src='/illustrations/medicine.svg' :width='imageSize' class='ma-16' alt='Technology' />
         </v-row>
         <v-divider class='mt-10'></v-divider>
         <v-row justify='center' align='center'>
-          <img src='/illustrations/robot.svg' width='400' class='ma-16' alt='Technology' />
+          <img src='/illustrations/robot.svg' :width='imageSize' class='ma-16' alt='Technology' />
           <v-col align='start'>
             <div align='start' class='mt-0 mb-7 mx-4'>
               <h1 class='text-h4 font-weight-bold'>Médico virtual com inteligência artificial.</h1>
@@ -42,7 +42,7 @@
         <v-row justify='center' align='center'>
           <v-col>
             <h1 class='text-h4 font-weight-bold'>Para todo lugar no seu bolso.</h1>
-            <img src='/images/apollo-app.png' width='700' alt='App' loading='lazy/'>
+            <img src='/images/apollo-app.png' :width='appSize' alt='App' loading='lazy/'>
             <v-row justify='center' align='center'>
               <img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' />
               <img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' />
@@ -51,7 +51,7 @@
         </v-row>
         <v-divider class='mt-10'></v-divider>
         <v-row justify='center' align='center' class='mt-10'>
-          <img src='/illustrations/doctors.svg' width='400' class='ma-16' alt='Technology' />
+          <img src='/illustrations/doctors.svg' :width='imageSize' class='ma-16' alt='Technology' />
           <v-col>
             <div align='start' class='mt-0'>
               <h1 class='text-h4 font-weight-bold'>O futuro é agora</h1>
@@ -61,9 +61,10 @@
         </v-row>
         <v-divider class='mt-10'></v-divider>
         <v-row>
-          <img src='/images/apollohealth-icon.svg' width='150' class='ma-6' alt='Logo' />
+          <img v-if='!isMobile' src='/images/apollohealth-icon.svg' width='150' class='ma-6' alt='Logo' />
           <v-col>
             <div align='start' class='mt-10'>
+              <img v-if='isMobile' src='/images/apollohealth-icon.svg' width='100' class='ma-6' alt='Logo' />
               <h1 class='text-h4 font-weight-bold'>A equipe Apollo</h1>
               <h3 class='text-h6 mt-6'>{{ texts.begin }}</h3>
             </div>
@@ -104,6 +105,25 @@ export default {
         ourMission: 'Nossa missão é direcionar o paciente o mais rápido possível aos profissionais da saúde, bastando apenas entrar em nossa plataforma e fazer um pré diagnóstico com nosso modelo baseado em Inteligência Artificial, assim o paciente será redirecionado para um médico especialista. Após isso, o paciente pode conversar com este médico e marcar uma videochamada ou até mesmo uma consulta, e se precisar, marcar exames com os nossos laboratórios parceiros. Os resultados e receitas são todos digitais, e o paciente poderá receber a nossa mail box contendo todos os remédios prescritos pelos seus médicos.'
       }
     }
+  },
+  computed: {
+    isMobile () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    imageSize () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 300
+        case 'sm': return 300
+        default: return 400
+      }
+    },
+    appSize () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 300
+        case 'sm': return 300
+        default: return 700
+      }
+    },
   }
 }
 </script>
