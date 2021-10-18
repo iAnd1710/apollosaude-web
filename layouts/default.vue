@@ -29,6 +29,10 @@
             <div class='px-0 mb-1 text-h6'><a :href='links.whats' target="_blank">{{ words.whatsContact }}</a></div>
             <div class='px-0 mb-1 text-h6'><a :href='"mailto:"+links.email' target="_blank">{{ links.email }}</a></div>
           </v-col>
+          <v-row justify='center' align='center'>
+            <img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' />
+            <img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' />
+          </v-row>
         </v-row>
         <v-row>
           <img src='/images/apollohealth-logo.svg' class='white-filter mx-3' :height='logoHeight' alt='Apollo Saúde'/>
