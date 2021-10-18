@@ -5,10 +5,10 @@
     :width='isMobile ? "100%" : "240px"' height='250px'
   >
     <v-card-text>
-      <div class='text-h5 text--primary font-weight-bold'>
-        <v-icon size='26' color='black'>{{ icon }}</v-icon>
-        {{ title }}
-      </div>
+      <v-row align='center'>
+        <v-icon size='26' color='black' class='ml-2'>{{ icon }}</v-icon>
+        <p class='text-h5 text--primary font-weight-bold ml-1 mt-4'>{{ title }}</p>
+      </v-row>
       <div class='mt-2 text--primary font-weight-bold'>{{ subtitle }}</div>
       <div class='mt-2 text-subtitle-2 text--primary'>
         <v-icon size='12' color='primary'>circle</v-icon>
@@ -19,7 +19,7 @@
       <v-btn
         :href='actionLink'
         text
-        color='deep-purple accent-4'
+        color='primary'
       >
         {{ actionName }}
       </v-btn>

@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-container>
-      <v-container>
+      <v-container class='my-6'>
         <v-row justify='center' align='center'>
-          <img src='/illustrations/medicine.svg' :width='imageSize' class='ma-16' alt='Technology' />
+          <img src='/illustrations/medicine.svg' :width='imageSize' class='mx-16' alt='Technology' />
           <v-col justify='center' align='center' class='my-6'>
             <div class='title ma-5'>
               <div align='start' class='mt-0 mb-7'>
@@ -11,10 +11,10 @@
                 <p class='text-h5 mt-6 font-weight-bold'>Como está se sentindo hoje?</p>
               </div>
               <v-row align='center' class='mt-8 ml-1' justify='start'>
-                <v-btn fab small elevation='0' color='primary' href='/prediction'>
+                <v-btn fab small elevation='0' color='primary' href='/assistant'>
                   <v-icon color='white'>mic</v-icon>
                 </v-btn>
-                <NuxtLink to='/prediction'><p class='text-h5 ml-4 mt-4 font-weight-bold'>Digite aqui</p></NuxtLink>
+                <NuxtLink to='/assistant'><p class='text-h5 ml-4 mt-4 font-weight-bold'>Digite aqui</p></NuxtLink>
               </v-row>
             </div>
             <div :class='titleMargin'>
@@ -22,7 +22,7 @@
           </v-col>
         </v-row>
       </v-container>
-      <v-container class='my-4'></v-container>
+      <v-container class='my-3'></v-container>
       <v-container>
         <v-row
           justify='center'>
@@ -34,10 +34,10 @@
           >
             <v-card-text>
               <v-row class='ma-1'>
-                <div class='text-h5 text--primary font-weight-bold'>
-                  <v-icon size='26' color='black'>assessment</v-icon>
-                  Status
-                </div>
+                <v-row align='center'>
+                  <v-icon size='26' color='black' class='ml-2'>assessment</v-icon>
+                  <p class='text-h5 text--primary font-weight-bold ml-1 mt-4'>Status</p>
+                </v-row>
                 <div class='ml-5 mt-2 text-subtitle-2 text--primary'>
                   <v-icon size='20' color='primary'>bluetooth</v-icon>
                   1 smartband conectada
@@ -84,11 +84,11 @@
             width='500px' height='250px'
           >
             <v-card-text>
-              <div class='text-h5 text--primary font-weight-bold'>
-                <v-icon size='26' color='black'>credit_card</v-icon>
-                Carteirinha
-              </div>
-              <img src='/images/carteirinha.svg' :height='isMobile ? "120px" : "150px"' class='mt-6' alt='Card' />
+              <v-row align='center'>
+                <v-icon size='26' color='black' class='ml-2'>credit_card</v-icon>
+                <p class='text-h5 text--primary font-weight-bold ml-1 mt-4'>Carteirinha</p>
+              </v-row>
+              <img src='/images/carteirinha.svg' :height='isMobile ? "136px" : "150px"' class='mt-3' alt='Card' />
             </v-card-text>
             <v-card-actions>
 

@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <div class="mt-2  text-h6">
-            Nesta página estão todas as suas receitas, você pode escolher receber os nossos <a href="./kits" class="text-decoration-underline primRY-text">kits</a> que contém os remédios de sua receita.
+            Nesta página estão todas as suas receitas, você pode escolher receber os nossos <NuxtLink to="/kits" class="text-decoration-underline primRY-text">kits</NuxtLink> que contém os remédios de sua receita.
         </div>
         <v-divider class="mt-5 mb-5"></v-divider>
         <h5 class="mt-5  text-h5">Olá, João</h5>
