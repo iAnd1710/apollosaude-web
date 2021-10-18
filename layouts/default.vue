@@ -12,7 +12,7 @@
 
       <v-spacer />
 
-      <v-btn rounded color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
+      <v-btn color="primary" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
 
     </v-app-bar>
 

@@ -17,8 +17,8 @@
                           <div class="white--text text-subtitle-1 font-weight-bold"> Dr. Luciano Rigoni Calleri </div>
                           <div class="white--text text-body-2"> Ortopedista </div>
                           <div class="white--text text-overline align-center">14/10/2021</div>
-                      </v-row>  
-                    </v-row>                  
+                      </v-row>
+                    </v-row>
                   </v-list-item-content>
               </v-list-item>
               <v-divider></v-divider>
@@ -30,8 +30,8 @@
                           <div class="white--text text-subtitle-1 font-weight-bold">Dr. João</div>
                           <div class="white--text text-body-2"> Dermatologista </div>
                           <div class="white--text text-overline align-center">15/07/2021</div>
-                      </v-row>  
-                    </v-row>                  
+                      </v-row>
+                    </v-row>
                   </v-list-item-content>
               </v-list-item>
               <v-card-actions></v-card-actions>
@@ -50,8 +50,6 @@ export default {
 </script>
 
 <style lang='sass'>
-.v-main 
-  background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
 .span

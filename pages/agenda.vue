@@ -2,7 +2,7 @@
   <v-app style="background-color:rgba(0,0,0,1)">
     <v-row class="fill-height">
       <v-col>
-        <v-sheet 
+        <v-sheet
           class="cima"
           height="64">
           <v-toolbar
@@ -41,9 +41,9 @@
           >
           <v-calendar
               class="rounded-lg calendar"
-              ref="calendar" 
+              ref="calendar"
               v-model="focus"
-              color="rgba(255, 255, 255, 0.4)"  
+              color="rgba(255, 255, 255, 0.4)"
               :events="events"
               :event-color="getEventColor"
               :type="type"
@@ -52,7 +52,7 @@
               @click:date="viewDay"
           >
           </v-calendar>
-              
+
           <v-menu
             v-model="selectedOpen"
             :close-on-content-click="false"
@@ -250,14 +250,12 @@
     background-color: transparent !important
 .baixo .v-sheet
    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0))
-.v-main 
-  background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
 .span
   display: inline-block
   line-height: 12px
-.v-calendar .v-btn__content 
+.v-calendar .v-btn__content
     color: white
 .theme--light .v-calendar-weekly .v-calendar-weekly__head-weekday
     color: black !important

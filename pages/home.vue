@@ -106,7 +106,7 @@
         >
           <v-card-text>
             <div class="text-h5 text--primary font-weight-bold"><v-icon size="26" color="black">credit_card</v-icon> Carteirinha </div>
-            <Icon2 class="mt-6"  style="height:220; width:100%" />            
+            <Icon2 class="mt-6"  style="height:220; width:100%" />
           </v-card-text>
           <v-card-actions>
 
@@ -158,8 +158,6 @@ export default {
 </script>
 
 <style lang='sass'>
-.v-main 
-  background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
 .span

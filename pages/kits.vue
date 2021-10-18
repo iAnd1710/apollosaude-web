@@ -1,6 +1,6 @@
 <template>
     <v-app style="background-color:rgba(0, 0, 0, 0);">
-         
+
     </v-app>
 </template>
 
@@ -10,8 +10,6 @@ export default {
 </script>
 
 <style lang='sass'>
-.v-main 
-  background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
 .span

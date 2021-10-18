@@ -7,7 +7,7 @@
     <div class="p-0 justify-content-center">
       <h1 class="text-center">Apollo Saúde - Diagnósticos</h1>
       <h2 class="text-center" v-if="!APIResult.length">
-        Conte-nos os seus sintomas 
+        Conte-nos os seus sintomas
       </h2>
       <h1 class="text-center" v-else style="font-size:1.1em">{{ APIResult }}</h1>
     </div>
@@ -190,7 +190,7 @@ export default {
         rednessOfEyes: 'Vermelhidão nos olhos',
         blurredAndDistortedVision: 'Visão turva e distorcida',
         vomiting: 'Vômito',
-      } 
+      }
     };
   },
   methods: {
@@ -215,8 +215,6 @@ export default {
 </script>
 
 <style lang='sass'>
-.v-main 
-  background: linear-gradient(to right, #663DEF, #E34BE2)
 .title
   max-width: 500px
 .span
