@@ -3,7 +3,7 @@
     <h1 class="text-center text-h4 font-weight-bold"> Kits</h1>
     <h3 class="text-center text-h9 mt-9">O Kit contém Álcool em gel para higienização das mãos, caixa de remédios com os
 medicamentos mais utilizados e recomendados para ocasiões do dia a dia, vitamina D3 para auxílio e manutenção da imuidade e duas máscaras compostas de material antiviral
-para proteção diária contra o COVID-19. Todos esses itens serão transportados e entregues a sua casa dentro de uma caixa de metal personalizada 
+para proteção diária contra o COVID-19. Todos esses itens serão transportados e entregues a sua casa dentro de uma caixa de metal personalizada
 Apollo Saúde, impedindo assim a produção excessiva de lixo. Os Kits Saúde poderão ser solicitados através do aplicativo Apollo Health e do portal
 Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues a sua casa, entre em contato com o seu plano de saúde..</h3>
 
@@ -15,7 +15,7 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
           rounded="lg"
           width="21%">
 
-        
+
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Álcool em gel</div>
             <img :src="alcool" style="height:220; width:100%" />
@@ -70,29 +70,29 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
           width="21%"
         >
           <v-card-text>
-            <div class="text-h6 text--primary font-weight-bold">Máscaras</div> 
-            <img :src="mascaraPL" style="height:220; width:100%" />          
+            <div class="text-h6 text--primary font-weight-bold">Máscaras</div>
+            <img :src="mascaraPL" style="height:220; width:100%" />
           </v-card-text>
         </v-card>
-       </v-row>       
+       </v-row>
   </div>
 </template>
 <script>
-import alcool from "static/kits/alcool-em-gel.png"
-import caixaRemedio from "static/kits/caixa-de-remedio.png"
-import mailBox from "static/kits/caixa-de-envio.png"
-import metalBox from "static/kits/caixa-de-metal.png"
-import mascaraPL from "static/kits/mascara-preta-lado.png"
+import alcool from "static/kits/alcool-em-gel.jpeg"
+import caixaRemedio from "static/kits/caixa-de-remedio.jpeg"
+import mailBox from "static/kits/caixa-de-envio.jpeg"
+import metalBox from "static/kits/caixa-de-metal.jpeg"
+import mascaraPL from "static/kits/mascara-preta-lado.jpeg"
 
 
 export default {
-    data: function () {
+    data () {
         return {
-            alcool: alcool,
-            caixaRemedio: caixaRemedio,
-            mailBox: mailBox,
-            metalBox: metalBox,
-            mascaraPL: mascaraPL
+            alcool,
+            caixaRemedio,
+            mailBox,
+            metalBox,
+            mascaraPL
         }
     }
 }
