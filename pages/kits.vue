@@ -18,7 +18,7 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
 
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Álcool em gel</div>
-            <img :src="alcool" style="height:220; width:100%" />
+            <img :src="alcool" height="220" width="100%" />
           </v-card-text>
         <v-img
           height="100%"
@@ -35,7 +35,7 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
         >
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Caixa de remédio</div>
-            <img :src="caixaRemedio" style="height:220; width:100%" />
+            <img :src="caixaRemedio" height="220" width="100%" />
           </v-card-text>
         </v-card>
 
@@ -47,7 +47,7 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
         >
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Mail Box</div>
-            <img :src="mailBox" style="height:220; width:100%" />
+            <img :src="mailBox" height="220" width="100%" />
           </v-card-text>
         </v-card>
 
@@ -59,7 +59,7 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
         >
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Metal Box</div>
-            <img :src="metalBox" style="height:220; width:100%" />
+            <img :src="metalBox" height="220" width="100%" />
           </v-card-text>
         </v-card>
 
@@ -71,28 +71,21 @@ Apollo Health. Para saber se o os Kits Saúde da Apollo Health serão entregues 
         >
           <v-card-text>
             <div class="text-h6 text--primary font-weight-bold">Máscaras</div>
-            <img :src="mascaraPL" style="height:220; width:100%" />
+            <img :src="mascaraPL" height="220" width="100%" />
           </v-card-text>
         </v-card>
        </v-row>
   </div>
 </template>
 <script>
-import alcool from "static/kits/alcool-em-gel.jpeg"
-import caixaRemedio from "static/kits/caixa-de-remedio.jpeg"
-import mailBox from "static/kits/caixa-de-envio.jpeg"
-import metalBox from "static/kits/caixa-de-metal.jpeg"
-import mascaraPL from "static/kits/mascara-preta-lado.jpeg"
-
-
 export default {
     data () {
         return {
-            alcool,
-            caixaRemedio,
-            mailBox,
-            metalBox,
-            mascaraPL
+          alcool: "/kits/alcool-em-gel.jpeg",
+          caixaRemedio: "/kits/caixa-de-remedio.jpeg",
+          mailBox: "/kits/caixa-de-envio.jpeg",
+          metalBox: "/kits/caixa-de-metal.jpeg",
+          mascaraPL: "/kits/mascara-preta-lado.jpeg"
         }
     }
 }

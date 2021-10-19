@@ -94,6 +94,32 @@
 
             </v-card-actions>
           </v-card>
+
+          <v-card
+            outlined
+            class='pa-2 ma-3 box'
+            width='500px' height='250px'
+          >
+            <v-card-text>
+              <v-row align='center'>
+                <v-icon size='26' color='black' class='ml-2'>location_on</v-icon>
+                <p class='text-h5 text--primary font-weight-bold ml-1 mt-4'>Locais próximos</p>
+              </v-row>
+              <img src='/images/carteirinha.svg' :height='isMobile ? "136px" : "150px"' class='mt-3' alt='Card' />
+            </v-card-text>
+            <v-card-actions>
+
+            </v-card-actions>
+          </v-card>
+
+          <button-card icon='receipt' title='Kits Apollo' subtitle='1 receita em curso:'
+                       content='Receita por Dr. Luciano Rigoni Calleri no dia 01/10/2021' action-link='/kits'
+                       action-name='Todos os Kits'></button-card>
+
+          <button-card icon='receipt' title='Farmácias' subtitle='1 receita em curso:'
+                       content='Receita por Dr. Luciano Rigoni Calleri no dia 01/10/2021' action-link='/kits'
+                       action-name='Comprar online'></button-card>
+
         </v-row>
       </v-container>
       <v-container class='my-16'></v-container>

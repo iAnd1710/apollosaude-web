@@ -1,11 +1,33 @@
 <template>
 <v-app>
+  <v-container class='my-6'>
+    <v-row justify='center' align='center'>
+      <img src='/illustrations/medicine.svg' :width='imageSize' class='mx-16' alt='Technology' />
+      <v-col justify='center' align='center' class='my-6'>
+        <div class='title ma-5'>
+          <div align='start' class='mt-0 mb-7'>
+            <h1 class='text-h4 font-weight-bold'>{{ hello }},</h1>
+            <p class='text-h5 mt-6 font-weight-bold'>Como está se sentindo hoje?</p>
+          </div>
+          <v-card rounded  class='mt-8 ml-1 pa-5'>
+            <v-row align='center' justify='start'>
+              <p class='text-h5 ml-4 mt-4 font-weight-bold'>Estou com sono</p>
+              <v-spacer></v-spacer>
+              <v-btn fab small elevation='0' color='primary' class='mx-4'>
+                <v-icon color='white'>send</v-icon>
+              </v-btn>
+            </v-row>
+          </v-card>
+        </div>
+        <div :class='titleMargin'>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
   <div
     class="d-flex flex-column justify-content-center align-items-center"
-    style="height: 80vh;"
   >
     <div class="p-0 justify-content-center">
-      <h1 class="text-center">Apollo Saúde - Diagnósticos</h1>
       <h2 class="text-center" v-if="!APIResult.length">
         Conte-nos os seus sintomas
       </h2>
@@ -192,6 +214,58 @@ export default {
         vomiting: 'Vômito',
       }
     };
+  },
+  computed: {
+    isMobile () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    imageSize () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 300
+        case 'sm': return 300
+        default: return 400
+      }
+    },
+    hello() {
+      const current = new Date()
+      if (current.getHours() < 18 && current.getHours() > 12) {
+        return 'Boa tarde'
+      } else if (current.getHours() > 17 || current.getHours() < 4) {
+        return 'Boa noite'
+      } else {
+        return 'Bom dia'
+      }
+    },
+    logoSize() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 60
+        case 'sm':
+          return 70
+        default:
+          return 120
+      }
+    },
+    titleSize() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'text-h4'
+        case 'sm':
+          return 'text-h3'
+        default:
+          return 'text-h3'
+      }
+    },
+    titleMargin() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'mt-2'
+        case 'sm':
+          return 'mt-4'
+        default:
+          return 'mt-6'
+      }
+    }
   },
   methods: {
     predict() {
