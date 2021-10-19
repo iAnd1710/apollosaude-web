@@ -9,15 +9,17 @@
             <h1 class='text-h4 font-weight-bold'>{{ hello }},</h1>
             <p class='text-h5 mt-6 font-weight-bold'>Como está se sentindo hoje?</p>
           </div>
-          <v-card rounded  class='mt-8 ml-1 pa-5'>
-            <v-row align='center' justify='start'>
-              <p class='text-h5 ml-4 mt-4 font-weight-bold'>Estou com sono</p>
-              <v-spacer></v-spacer>
-              <v-btn fab small elevation='0' color='primary' class='mx-4'>
-                <v-icon color='white'>send</v-icon>
-              </v-btn>
-            </v-row>
-          </v-card>
+          <v-row align='center' justify='center' class='mx-1 my-5'>
+            <v-text-field
+              v-model='symptoms'
+              label="Digite aqui"
+              solo
+            ></v-text-field>
+            <v-btn fab small color='primary' class='ml-3 mb-6' v-on:click="predict"
+                   @click="predict">
+              <v-icon color='white'>send</v-icon>
+            </v-btn>
+          </v-row>
         </div>
         <div :class='titleMargin'>
         </div>
@@ -27,48 +29,17 @@
   <div
     class="d-flex flex-column justify-content-center align-items-center"
   >
-    <div class="p-0 justify-content-center">
-      <h2 class="text-center" v-if="!APIResult.length">
-        Conte-nos os seus sintomas
-      </h2>
-      <h1 class="text-center" v-else style="font-size:1.1em">{{ APIResult }}</h1>
-    </div>
-
-    <div class="p-2">
-      <form @submit.prevent>
-        <div class="form-row" style="max-width:500px">
-          <div class="form-group col-12">
-            <label for="symptom">Sintoma</label>
-            <select
-              v-model.trim="diseasedata.symptoms"
-              class="form-control"
-              id="symptom">
-              <option value="Acidity" selected>{{ words.acidity }}</option>
-              <option value="Vomiting" selected>{{ words.vomiting }}</option>
-            </select>
-          </div>
-
-          <div class="form-group col-12">
-            <label for="symptom">Sintoma</label>
-            <select
-              v-model.trim="diseasedata.symptoms"
-              class="form-control"
-              id="symptom">
-              <option value="Acidity" selected>{{ words.acidity }}</option>
-              <option value="Vomiting" selected>{{ words.vomiting }}</option>
-            </select>
-          </div>
-
-          <button
-            v-on:click="predict"
-            @click="predict"
-            type="button"
-            class="btn btn-primary btn-lg btn-block">
-            Confirmar
-          </button>
-        </div>
-      </form>
-    </div>
+    <v-col>
+      <div v-if='APIResult !== ""' align='start' class='mt-0'>
+        <h1 class='text-h5 font-weight-bold'>Olá, seguem algumas informações para você! Há uma probalididade de ser {{disease}}. Consulte um médico especializado para mais informações.</h1>
+        <p class='text-h6 mt-6'>
+          Seguem algumas sugestões. {{ description }}
+        </p>
+        <p class='text-h6 mt-6'>
+          A Apollo fica à sua disposição! Conte conosco!
+        </p>
+      </div>
+    </v-col>
   </div>
 </v-app>
 </template>
@@ -79,139 +50,139 @@ export default {
   name: "Disease",
   data() {
     return {
-      diseasedata: {
-        symptoms: []
-      },
-      APIResult: [],
-      words: {
-        acidity: 'Acidez',
-        anxiety: 'Ansiedade',
-        toxicLook: 'Aparencia toxica(tifo)',
-        increasedAppetite: 'Aumento do apetite',
-        blister: 'Bolha',
-        phlegm: 'Catarro',
-        foulSmellOfUrine: 'Cheiro ruim na urina',
-	      itching: 'Coceira',
-        internalItching: 'Coceira interna',
-        cramps: 'Cólicas',
-        congestion: 'Congestionamento',
-        constipation: 'Constipação',
-        continuousFeelOfUrine: 'Constante vontade de urinar',
-        extraMaritalContacts: 'Contatos extraconjugais',
-        coma: 'Coma',
-        blackheads: 'Cravos pretos',
-        bladderDiscomfort: 'Desconforto na bexiga',
-        depression: 'Depressão',
-        skinPeeling: 'Descamação da pele',
-        diarrhoea: 'Diarréia',
-        distentionOfAbdomen: 'Distensão do abdômen',
-        visualDisturbances: 'Distúrbios visuais',
-        abdominalPain: 'Dor abdominal',
-        painfulWalking: 'Dor ao caminhar',
-        headache: 'Dor de cabeça',
-        stomachPain: 'Dor de estômago',
-        painDuringBowelMovements: 'Dor durante as evacuações',
-        musclePain: 'Dor muscular',
-        bellyPain: 'Dor na barriga',
-        painInAnalRegion: 'Dor na região anal',
-        jointPain: 'Dor nas articulações',
-        hipJointPain: 'Dor nas articulações do quadril',
-        kneePain: 'Dor no joelho',
-        chestPain: 'Dor no peito',
-        neckPain: 'Dor no pescoço',
-        painBehindTheEyes: 'Dor por trás dos olhos',
-        skinRash: 'Erupção cutânea',
-        nodalSkinEruptions: 'Erupção nodal na pele',
-        pusFilledPimples: 'Espinhas cheias de pus',
-        continuousSneezing: 'Espirros contínuos',
-        fluidOverload: 'Excesso de fluido',
-        rustySputum: 'Expectoração enferrujada',
-        mucoidSputum: 'Expectoração mucoide',
-        silverLikeDusting: 'Exposição a prata como poeira',
-        swollenExtremeties: 'Extremidades inchadas',
-        fatique: 'Fadiga',
-        slurredSpeech: 'Fala arrastada',
-        breathlessness: 'Falta de ar',
-        lackOfConcentration: 'Falta de concentração',
-        highFever: 'Febre alta',
-        mildFever: 'Febre amarela',
-        redSoreAroundNose: 'Ferida vermelha ao redor do nariz',
-        bloodyStool: 'Fezes sangrentas',
-        weaknessOfOneBodySide: 'Fraqueza de um lado do corpo',
-        weaknessInLimbs: 'Fraqueza nos membros',
-        muscleWeakness: 'Fraqueza muscular',
-        fastHeartRate: 'Frequência cardíaca rápida',
-        excessiveHunger: 'Fome excessiva',
-        swelledLymphNodes: 'Gânglios linfáticos inchados',
-        weightGain: 'Ganho de peso',
-        bruising: 'Hematomas',
-        historyOfAlcoholConsumption: 'Histórico de consumo de álcool',
-        familyHistory: 'Histórico familiar',
-        swellingJoints: 'Inchaço nas articulações',
-        swellingOfStomach: 'Inchaço no estômago',
-        indigestion: 'indigestão',
-        restlessness: 'Inquietação',
-        unsteadiness: 'Instabilidade',
-        acuteLiverFailure: 'Insuficiência hepática aguda',
-        irritability: 'Irritabilidade',
-        irritationInAnus: 'Irritação no ânus',
-        throatIrritation: 'Irritação na garganta',
-        dryingAndTinglingLips: 'Lábios secos e formigando',
-        lethargy: 'Letargia',
-        yellowCrustOoze: 'Lodo de crosta amarela',
-        malaise: 'Mal-estar',
-        spottingUrination: 'Manchando a urina',
-        patchesInThroat: 'Manchas na garganta',
-        redSpotsOverBody: 'Manchas vermelhas no corpo',
-        dischromicPatches: 'Manchas discrômicas',
-        coldHandsAndFeets: 'Mãos e pés frios',
-        abnormalMenstruation: 'Menstruação anormal',
-        spinningMovements: 'Movimentos giratórios',
-        moodSwings: 'Mudanças de humor',
-        runnyNose: 'Nariz a pingar',
-        nausea: 'Náusea',
-        irregularSugarLevel: 'Nível de açúcar irregular',
-        obesity: 'Obesidade',
-        yellowingOfEyes: 'Olhos amarelados',
-        sunkenEyes: 'Olhos fundos',
-        wateringFromEyes: 'Olhos lacrimejando',
-        palpitations: 'Palpitações',
-        passageOfGases: 'Passagem de gases',
-        yellowishSkin: 'Pele amarela',
-        smallDentsInNails: 'Pequenas marcas nas unhas',
-        lossOfAppetite: 'Perda de apetite',
-        muscleWasting: 'Perda de massa muscular',
-        lossOfBalance: 'Perda de equilíbrio',
-        lossOfSmell: 'Perda de olfato',
-        weightLoss: 'Perda de peso',
-        swollenLegs: 'Pernas inchadas',
-        scurring: 'Pressa',
-        sinusPressure: 'Pressão do seio',
-        polyuria: 'Poliúria',
-        burningMicturition: 'Queima de micção',
-        receivingUnsterileInjections: 'Recebeu injeção não esterilizada',
-        receivingBloodTransfusion: 'Recebeu transfusão de sangue',
-        movementStiffness: 'Rigidez no movimento',
-        puffyFaceAndEyes: 'Rosto e olhos inchados',
-        stomachBleeding: 'Sangramento no estômago',
-        bloodInSputum: 'Sangue na expectoração',
-        alteredSensorium: 'Sensorio alterado',
-        fluidOverLoad: 'Sobrecarga de fluido',
-        sweating: 'Suando',
-        enlargedThyroid: 'Tireóide aumentada',
-        shivering: 'Tremedeira',
-        stiffNeck: 'Torcicolo',
-        cough: 'Tosse',
-        ulcersOnTongue: 'Úlceras na língua',
-        inflammatoryNails: 'Unhas inflamadas',
-        brittleNails: 'Unhas quebradiças',
-        yellowUrine: 'Urina amarelada',
-        darkUrine: 'Urina escura',
-        swollenBloodVessels: 'Vasos sanguíneos inchados',
-        prominentVeinsOnCalf: 'Veias proeminentes na panturrilha',
-        rednessOfEyes: 'Vermelhidão nos olhos',
-        blurredAndDistortedVision: 'Visão turva e distorcida',
-        vomiting: 'Vômito',
+      symptoms: '',
+      APIResult: '',
+      disease: '',
+      description: '',
+      sintomas: {
+        "abdominal_pain": "Dor abdominal",
+        "abnormal_menstruation": "Menstruação anormal",
+        "acidity": "Acidez",
+        "acute_liver_failure": "Insuficiência hepática aguda",
+        "altered_sensorium": "Sensorio alterado",
+        "anxiety": "Ansiedade",
+        "belly_pain": "Dor na barriga",
+        "blackheads": "Cravos pretos",
+        "bladder_discomfort": "Desconforto na bexiga",
+        "blister": "Bolha",
+        "blood_in_sputum": "Sangue na expectoração",
+        "bloody_stool": "Fezes sangrentas",
+        "blurred_and_distorted_vision": "Visão turva e distorcida",
+        "breathlessness": "Falta de ar",
+        "brittle_nails": "Unhas quebradiças",
+        "bruising": "Hematomas",
+        "burning_micturition": "Queima de micção",
+        "chest_pain": "Dor no peito",
+        "cold_hands_and_feets": "Mãos e pés frios",
+        "coma": "Coma",
+        "congestion": "Congestionamento",
+        "constipation": "Constipação",
+        "continuous_feel_of_urine": "Constante vontade de urinar",
+        "continuous_sneezing": "Espirros contínuos",
+        "cough": "Tosse",
+        "cramps": "Cólicas",
+        "dark_urine": "Urina escura",
+        "depression": "Depressão",
+        "diarrhoea": "Diarréia",
+        "dischromic_patches": "Manchas discrômicas",
+        "distention_of_abdomen": "Distensão do abdômen",
+        "drying_and_tingling_lips": "Lábios secos e formigando",
+        "enlarged_thyroid": "Tireóide aumentada",
+        "excessive_hunger": "Fome excessiva",
+        "extra_marital_contacts": "Contatos extraconjugais",
+        "family_history": "Histórico familiar",
+        "fast_heart_rate": "Frequência cardíaca rápida",
+        "fatique": "Fadiga",
+        "fluid_over_load": "Sobrecarga de fluido",
+        "fluid_overload": "Excesso de fluido",
+        "foul_smell_of_urine": "Cheiro ruim na urina",
+        "headache": "Dor de cabeça",
+        "high_fever": "Febre alta",
+        "hip_joint_pain": "Dor nas articulações do quadril",
+        "history_of_alcohol_consumption": "Histórico de consumo de álcool",
+        "increased_appetite": "Aumento do apetite",
+        "indigestion": "indigestão",
+        "inflammatory_nails": "Unhas inflamadas",
+        "internal_itching": "Coceira interna",
+        "irregular_sugar_level": "Nível de açúcar irregular",
+        "irritability": "Irritabilidade",
+        "irritation_in_anus": "Irritação no ânus",
+        "itching": "Coceira",
+        "joint_pain": "Dor nas articulações",
+        "knee_pain": "Dor no joelho",
+        "lack_of_concentration": "Falta de concentração",
+        "lethargy": "Letargia",
+        "loss_of_appetite": "Perda de apetite",
+        "loss_of_balance": "Perda de equilíbrio",
+        "loss_of_smell": "Perda de olfato",
+        "malaise": "Mal-estar",
+        "mild_fever": "Febre amarela",
+        "mood_swings": "Mudanças de humor",
+        "movement_stiffness": "Rigidez no movimento",
+        "mucoid_sputum": "Expectoração mucoide",
+        "muscle_pain": "Dor muscular",
+        "muscle_wasting": "Perda de massa muscular",
+        "muscle_weakness": "Fraqueza muscular",
+        "nausea": "Náusea",
+        "neck_pain": "Dor no pescoço",
+        "nodal_skin_eruptions": "Erupção nodal na pele",
+        "obesity": "Obesidade",
+        "pain_behind_the_eyes": "Dor por trás dos olhos",
+        "pain_during_bowel_movements": "Dor durante as evacuações",
+        "pain_in_anal_region": "Dor na região anal",
+        "painful_walking": "Dor ao caminhar",
+        "palpitations": "Palpitações",
+        "passage_of_gases": "Passagem de gases",
+        "patches_in_throat": "Manchas na garganta",
+        "phlegm": "Catarro",
+        "polyuria": "Poliúria",
+        "prominent_veins_on_calf": "Veias proeminentes na panturrilha",
+        "puffy_face_and_eyes": "Rosto e olhos inchados",
+        "pus_filled_pimples": "Espinhas cheias de pus",
+        "receiving_blood_transfusion": "Recebeu transfusão de sangue",
+        "receiving_unsterile_injections": "Recebeu injeção não esterilizada",
+        "red_sore_around_nose": "Ferida vermelha ao redor do nariz",
+        "red_spots_over_body": "Manchas vermelhas no corpo",
+        "redness_of_eyes": "Vermelhidão nos olhos",
+        "restlessness": "Inquietação",
+        "runny_nose": "Nariz a pingar",
+        "rusty_sputum": "Expectoração enferrujada",
+        "scurring": "Pressa",
+        "shivering": "Tremedeira",
+        "silver_like_dusting": "Exposição a prata como poeira",
+        "sinus_pressure": "Pressão do seio",
+        "skin_peeling": "Descamação da pele",
+        "skin_rash": "Erupção cutânea",
+        "slurred_speech": "Fala arrastada",
+        "small_dents_in_nails": "Pequenas marcas nas unhas",
+        "spinning_movements": "Movimentos giratórios",
+        "spotting_urination": "Manchando a urina",
+        "stiff_neck": "Torcicolo",
+        "stomach_bleeding": "Sangramento no estômago",
+        "stomach_pain": "Dor de estômago",
+        "sunken_eyes": "Olhos fundos",
+        "sweating": "Suando",
+        "swelled_lymph_nodes": "Gânglios linfáticos inchados",
+        "swelling_joints": "Inchaço nas articulações",
+        "swelling_of_stomach": "Inchaço no estômago",
+        "swollen_blood_vessels": "Vasos sanguíneos inchados",
+        "swollen_extremeties": "Extremidades inchadas",
+        "swollen_legs": "Pernas inchadas",
+        "throat_irritation": "Irritação na garganta",
+        "toxic_look": "Aparencia toxica(tifo)",
+        "ulcers_on_tongue": "Úlceras na língua",
+        "unsteadiness": "Instabilidade",
+        "visual_disturbances": "Distúrbios visuais",
+        "vomiting": "Vômito",
+        "watering_from_eyes": "Olhos lacrimejando",
+        "weakness_in_limbs": "Fraqueza nos membros",
+        "weakness_of_one_body_side": "Fraqueza de um lado do corpo",
+        "weight_gain": "Ganho de peso",
+        "weight_loss": "Perda de peso",
+        "yellow_crust_ooze": "Lodo de crosta amarela",
+        "yellow_urine": "Urina amarelada",
+        "yellowing_of_eyes": "Olhos amarelados",
+        "yellowish_skin": "Pele amarela"
       }
     };
   },
@@ -268,16 +239,26 @@ export default {
     }
   },
   methods: {
+    findSymptoms() {
+
+    },
     predict() {
+      if(this.symptoms === "") {
+        return
+      }
       getAPI
         .get("/disease", {
           params: {
-            symptoms: this.diseasedata.symptoms
+            symptoms: this.symptoms
           }
         })
         .then(response => {
           console.log("Recieved data successfully");
-          this.APIResult = response.data;
+          const obj = JSON.parse(response.data.toString().replaceAll("'", '"'))
+
+          this.APIResult = obj
+          this.disease = obj.disease
+          this.description = obj.description
           console.log(response.data);
         })
         .catch(err => {
