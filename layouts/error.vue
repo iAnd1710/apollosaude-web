@@ -21,6 +21,9 @@ export default {
       default: null
     }
   },
+  created() {
+    this.$router.push({ name: 'index' })
+  },
   data() {
     return {
       pageNotFound: '404 Nada foi encotrado por aqui',

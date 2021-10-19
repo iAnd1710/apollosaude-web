@@ -5,14 +5,17 @@
       fixed
       app>
       <v-toolbar-title>
+        <NuxtLink v-if='this.$nuxt.$route.name !== "index" && this.$nuxt.$route.name !== "home"' to='/home'>
+          <v-icon color='primary' class='ml-2 pb-3'>arrow_back_ios</v-icon>
+        </NuxtLink>
         <NuxtLink to='/home'>
           <img src='/images/apollohealth-logo.svg' class='black-filter mx-3 mt-3' :height='logoHeight' alt='Apollo Saúde'/>
         </NuxtLink>
       </v-toolbar-title>
       <v-spacer />
 
-      <v-btn v-if='routeName === "index"' :color="isMobile ? 'white' : 'primary'" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
-      <v-btn v-if='routeName !== "index"' :color="isMobile ? 'white' : 'primary'" elevation='0' class='mx-3 text-uppercase' href='/'>{{ words.aboutUs }}</v-btn>
+      <v-btn v-if='this.$nuxt.$route.name === "index"' :color="isMobile ? 'white' : 'primary'" elevation='0' class='mx-3 text-uppercase' href='/home'>{{ words.login }}</v-btn>
+      <v-btn v-if='this.$nuxt.$route.name !== "index"' :color="isMobile ? 'white' : 'primary'" elevation='0' class='mx-3 text-uppercase' href='/'>{{ words.aboutUs }}</v-btn>
 
     </v-app-bar>
 
@@ -48,7 +51,6 @@
 export default {
   data () {
     return {
-      routeName: this.$nuxt.$route.name,
       drawer: false,
       group: null,
       links: {
