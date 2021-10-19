@@ -30,8 +30,8 @@
             <div class='px-0 mb-1 text-h6'><a :href='"mailto:"+links.email' target="_blank">{{ links.email }}</a></div>
           </v-col>
           <v-row justify='center' align='center'>
-            <img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' />
-            <img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' />
+            <a target="_blank" href='https://xd.adobe.com/view/2ceac62a-dfba-4cf9-a7cc-2cd84867350b-79b9/?fullscreen'><img src='/app-store-badge.svg' width='150' class='ma-3' alt='App Store' /></a>
+            <a target="_blank" href='https://xd.adobe.com/view/2ceac62a-dfba-4cf9-a7cc-2cd84867350b-79b9/?fullscreen'><img src='/google-play-badge.png' width='190' class='ma-3' alt='Google Play' /></a>
           </v-row>
         </v-row>
         <v-row>
@@ -63,7 +63,7 @@ export default {
       words: {
         projects: 'Projetos',
         disease: 'Fazer Diagnóstico',
-        login: 'Entrar',
+        login: 'Começar',
         contact: 'Contato',
         about: 'Sobre',
         services: 'Serviços',

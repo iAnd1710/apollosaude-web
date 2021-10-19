@@ -22,7 +22,7 @@
                   </v-list-item-content>
               </v-list-item>
               <v-divider></v-divider>
-              <v-list-item href="./consultations/orthopedist">
+              <v-list-item href="/">
                   <v-list-item-content>
                     <v-row class="ml-0 mr-0">
                       <LabIcon class="pr-5 black-filter" height="20px"></LabIcon>
